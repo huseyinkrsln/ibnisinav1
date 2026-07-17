@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="tr"><head>
+﻿<!DOCTYPE html><html class="scroll-smooth" lang="tr"><head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
@@ -107,6 +107,7 @@
             }
         } catch (_e) {}
     </script>
+<link rel="stylesheet" href="mobile-fix.css">
 </head>
 <body class="bg-surface text-charcoal-text font-body-md overflow-x-hidden">
 <!-- TopNavBar -->
@@ -418,4 +419,36 @@
                 <div class="flex gap-3">
                     <span class="material-symbols-outlined text-action-teal">phone_in_
 
-</span></div></div></div></div></footer></body></html>
+</span></div></div></div></div></footer><!-- Mobile Menu Start -->
+<div id="mobile-menu-overlay">
+    <button id="mobile-menu-close" style="align-self: flex-end; background: none; border: none; font-size: 24px; cursor: pointer; padding: 10px;">&times;</button>
+    <a href="index.html">Anasayfa</a>
+    <a href="sayfalar/tÄ±bbibirimler.html">TÄ±bbi Birimler</a>
+    <a href="sayfalar/hekimlerimiz.html">Hekimlerimiz</a>
+    <a href="sayfalar/onlineislemler.html">Online Ä°ÅŸlemler</a>
+    <a href="sayfalar/iletisim.html">Ä°letiÅŸim</a>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var navActions = document.querySelector('nav .flex.items-center.gap-stack-md');
+        if (navActions && !document.getElementById('mobile-menu-btn')) {
+            var btn = document.createElement('button');
+            btn.id = 'mobile-menu-btn';
+            btn.innerHTML = '<span class="material-symbols-outlined">menu</span>';
+            navActions.appendChild(btn);
+            
+            btn.addEventListener('click', function() {
+                document.getElementById('mobile-menu-overlay').classList.add('active');
+            });
+        }
+        
+        var closeBtn = document.getElementById('mobile-menu-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                document.getElementById('mobile-menu-overlay').classList.remove('active');
+            });
+        }
+    });
+</script>
+<!-- Mobile Menu End -->
+</body></html>

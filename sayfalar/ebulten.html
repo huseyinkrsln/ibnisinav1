@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="tr"><head>
 <meta charset="utf-8"/>
@@ -115,6 +115,7 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .active-nav { color: #A81E13; font-weight: 700; border-bottom: 2px solid #A81E13; padding-bottom: 0.25rem; }
     </style>
+<link rel="stylesheet" href="../mobile-fix.css">
 </head>
 <body class="bg-background text-on-surface">
 <!-- TopNavBar -->
@@ -313,4 +314,36 @@
 </div>
 </footer>
 
+<!-- Mobile Menu Start -->
+<div id="mobile-menu-overlay">
+    <button id="mobile-menu-close" style="align-self: flex-end; background: none; border: none; font-size: 24px; cursor: pointer; padding: 10px;">&times;</button>
+    <a href="../index.html">Anasayfa</a>
+    <a href="tÄ±bbibirimler.html">TÄ±bbi Birimler</a>
+    <a href="hekimlerimiz.html">Hekimlerimiz</a>
+    <a href="onlineislemler.html">Online Ä°ÅŸlemler</a>
+    <a href="iletisim.html">Ä°letiÅŸim</a>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var navActions = document.querySelector('nav .flex.items-center.gap-stack-md');
+        if (navActions && !document.getElementById('mobile-menu-btn')) {
+            var btn = document.createElement('button');
+            btn.id = 'mobile-menu-btn';
+            btn.innerHTML = '<span class="material-symbols-outlined">menu</span>';
+            navActions.appendChild(btn);
+            
+            btn.addEventListener('click', function() {
+                document.getElementById('mobile-menu-overlay').classList.add('active');
+            });
+        }
+        
+        var closeBtn = document.getElementById('mobile-menu-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                document.getElementById('mobile-menu-overlay').classList.remove('active');
+            });
+        }
+    });
+</script>
+<!-- Mobile Menu End -->
 </body></html>
