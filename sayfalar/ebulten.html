@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>E-Bülten | İbni Sina Hastanesi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#b4271b",
+                    "inverse-on-surface": "#eef1ef",
+                    "on-surface-variant": "#5a413c",
+                    "inverse-surface": "#2d3130",
+                    "on-primary-fixed": "#410000",
+                    "on-secondary-fixed": "#171c1f",
+                    "surface-dim": "#d7dbd9",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#840000",
+                    "on-background": "#181c1b",
+                    "on-tertiary-container": "#68dbfb",
+                    "tertiary": "#004654",
+                    "outline": "#8e706b",
+                    "action-teal": "#009DBB",
+                    "on-secondary-container": "#5e6367",
+                    "surface-bright": "#f7faf8",
+                    "tertiary-container": "#005f72",
+                    "on-secondary-fixed-variant": "#42474b",
+                    "on-tertiary-fixed": "#001f27",
+                    "tertiary-fixed": "#b1ecff",
+                    "surface-container-high": "#e6e9e7",
+                    "on-primary-fixed-variant": "#910904",
+                    "surface-container-low": "#f1f4f2",
+                    "on-secondary": "#ffffff",
+                    "deep-madder": "#A81E13",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "primary-container": "#a81e13",
+                    "charcoal-text": "#22272A",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#dfe3e7",
+                    "surface-muted": "#F8FAFB",
+                    "on-surface": "#181c1b",
+                    "surface": "#f7faf8",
+                    "slate-gray": "#4E5255",
+                    "secondary-fixed-dim": "#c3c7cb",
+                    "secondary": "#5a5f62",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#ffbbb1",
+                    "surface-variant": "#e0e3e1",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "tertiary-fixed-dim": "#61d5f5",
+                    "primary-fixed": "#ffdad4",
+                    "inverse-primary": "#ffb4a8",
+                    "surface-container": "#ebefed",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004e5e",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f7faf8",
+                    "secondary-container": "#dce0e4",
+                    "hospital-white": "#FFFFFF",
+                    "surface-container-highest": "#e0e3e1",
+                    "outline-variant": "#e2beb9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-lg": "24px",
+                    "margin-desktop": "40px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Montserrat"],
+                    "headline-sm": ["Montserrat"],
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "nav-link": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "nav-link": ["15px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7faf8; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .active-nav { color: #A81E13; font-weight: 700; border-bottom: 2px solid #A81E13; padding-bottom: 0.25rem; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-hospital-white border-b border-[#EEEEEE] transition-all duration-300 h-24">
+    <div class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center gap-4">
+        <!-- Brand -->
+        <a class="mr-4 flex items-center" href="../index.html">
+            <img src="../ibn-i-sina-hastanesi.jpg" alt="İbni Sina Hastanesi Logo" class="h-16 w-auto object-contain">
+        </a>
+        <!-- Tabbed Navigation Links -->
+        <div class="hidden lg:flex items-center h-full">
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="../index.html">Anasayfa</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="onlineislemler.html">Online İşlemler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="iletisim.html">İletişim</a>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center gap-stack-md">
+            <div class="flex items-center gap-2 border-r border-slate-gray/20 pr-4">
+                <span class="text-[11px] font-bold text-deep-madder cursor-pointer">TR</span>
+                <span class="text-[11px] text-slate-gray">|</span>
+                <span class="text-[11px] font-bold text-slate-gray hover:text-deep-madder cursor-pointer transition-colors">EN</span>
+            </div>
+            <a class="flex items-center gap-1.5 text-deep-madder font-bold text-[13px] ml-2" href="tel:08500000000">
+                <span class="material-symbols-outlined text-base">call</span>
+                <span class="">0850 000 00 00</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<main class="pt-32 pb-section-gap">
+<!-- Header Section -->
+<header class="max-w-container-max mx-auto px-margin-desktop mb-stack-lg">
+<div class="border-l-4 border-deep-madder pl-6 mb-stack-md">
+<h1 class="font-headline-lg text-headline-lg text-charcoal-text">E-Bülten</h1>
+<p class="font-body-lg text-body-lg text-slate-gray mt-2">Güncel sağlık haberleri, uzman görüşleri ve sağlıklı yaşam rehberi.</p>
+</div>
+</header>
+<!-- Featured Newsletter (Bento Style) -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Highlighted Content -->
+<a href="bulten.html" class="md:col-span-8 group cursor-pointer overflow-hidden rounded-xl border border-[#EEEEEE] bg-hospital-white hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)] transition-all duration-300 block">
+<div class="relative h-96 overflow-hidden">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="A professional medical photograph of a doctor holding a spine model, explaining spinal health in a modern clinic with soft ambient lighting and deep red corporate accents, minimalist medical style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_bi9nBhJgByRNauuJdy3iXW4FE8fkY5HgXOBiScBBWqiisiSXKExs5iGYw1mNXK5c7OW7HhO1FwGfsaLVKKJ3rZ94mAlvoD6RbathojmYT6UiRoQYhG5xVvsw8lqNBfV8BmASQ547OtmIUVXKIcXTpTCue7EGKusKvroru-VR06RLrqiaVOh96aoCJGxY6bOQUxVpAHdpFPFosyw48gkcvWbvBNzhA731UhGVZoqXsplXkNF8gEPG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-text/80 to-transparent"></div>
+<div class="absolute bottom-0 p-stack-lg text-hospital-white">
+<span class="inline-block bg-deep-madder px-3 py-1 text-xs font-bold uppercase tracking-wider rounded mb-stack-sm">Kapak Konusu</span>
+<h2 class="font-headline-md text-headline-md leading-tight mb-stack-sm">10 SORU 10 CEVAPLA BEL FITIKLARI</h2>
+<p class="font-body-md text-body-md text-gray-200 line-clamp-2 max-w-2xl">Bel fıtığı, omurlar arasındaki omurganın yükünü taşıyan, ve bu yükü bir anlamda süspanse ederek amortisör görevi gören disk dediğimiz yastıkçıkların yırtılmasıyla oluşur.</p>
+</div>
+</div>
+</a>
+<!-- Secondary Highlight -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 bg-surface-muted p-stack-lg rounded-xl border border-[#EEEEEE] flex flex-col justify-between">
+<div>
+<span class="text-deep-madder material-symbols-outlined mb-stack-sm">science</span>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text leading-tight mb-2">AKILCI LABORATUVAR KULLANIMI PROJESİ</h3>
+<p class="text-body-sm text-slate-gray">Hastanemiz bünyesinde başlatılan yeni akılcı laboratuvar kullanımı projesi ile teşhis süreçlerini optimize ediyoruz.</p>
+</div>
+<a class="text-deep-madder font-bold flex items-center gap-2 mt-4 hover:gap-4 transition-all" href="bulten.html">İncele <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="flex-1 bg-deep-madder p-stack-lg rounded-xl flex flex-col justify-between text-hospital-white">
+<div>
+<span class="material-symbols-outlined mb-stack-sm">video_library</span>
+<h3 class="font-headline-sm text-headline-sm leading-tight mb-2">Hastanemizin Tanıtım Videosu</h3>
+<p class="text-body-sm opacity-90">İbni Sina Hastanesi modern imkanlarını ve uzman kadrosunu yakından tanıyın.</p>
+</div>
+<button class="bg-hospital-white text-deep-madder py-2 px-4 rounded font-bold self-start mt-4">İzle</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-hospital-white rounded-xl border border-[#EEEEEE] overflow-hidden hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)] transition-all group">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="A macro photograph of a drop of milk splashing into a pool of milk, creating a crown shape, representing the importance of breast milk with soft lighting and clinical white-and-red tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFAM1Xu_n8nrve_izA1nl3uG-HhJC0vuoZNsv0ACAw7r9FIDmH_Sw-IuxjBcTiALaxS2QfyvNi-jv60rgguQOuKdOGW47EAzGvxyNfZBaU9bMaVmMirbtjUFgEihkwF6mq9l3FIkAX7g-L5CDtQbB6RDvvNQOcVIXZJTfktt6qO--SBm6PtawEaTVZy7Q8mdhGAE-GGrTbphxOM82BWNh4RoWi0Cp9iRYZ1MTkhr5mdpBwIXPKaGjL"/>
+</div>
+<div class="p-stack-lg">
+<h4 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm leading-snug">Anne Sütü'nün Önemi</h4>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-md line-clamp-3">Bebek beslenmesinde ilk 6 ay sadece anne sütü ve 2 yaş sonrasına kadar devam eden sürecin önemi üzerine uzman görüşlerimiz.</p>
+<a href="bulten.html" class="text-deep-madder border border-deep-madder px-4 py-2 rounded font-bold text-sm hover:bg-deep-madder hover:text-hospital-white transition-all text-center inline-block">Devamını Oku</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-hospital-white rounded-xl border border-[#EEEEEE] overflow-hidden hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)] transition-all group">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="A medical visualization of a human nose using 3D ultrasound technology, representing Piezo Rhinoplasty surgery, high-tech clinical atmosphere with vibrant deep red and teal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN6WIb58hHfmfnhsutKNBIuf9eMpZTA0WheEXUCLNMr8KdPn_Y8Rcq8kC3Dbl5DviHB-9KaPoV6RkwSwWr41i-gqI6NukvRDkjv7czqJSzI1LxSUKQkJwytowoyrh9dCrXXssWahz7vD56SQk0V1rNbYZcSUj5DXXdCB1l-s87Ry-GEXoubynMHDej2DhNKVXCmuKvbJzDS2pVbGjZCBRd5OdXmBDP1kHuEV-MIv_yvWV8Ffgpv3IX"/>
+</div>
+<div class="p-stack-lg">
+<h4 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm leading-snug">Burun estetiğinde yeni bir devir "Piezo Rinoplasti"</h4>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-md line-clamp-3">Burun estetiğinde dokulara zarar vermeyen, ultrasonik dalgalarla kemik şekillendirme sağlayan yeni nesil yöntem.</p>
+<a href="bulten.html" class="text-deep-madder border border-deep-madder px-4 py-2 rounded font-bold text-sm hover:bg-deep-madder hover:text-hospital-white transition-all text-center inline-block">İncele</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-hospital-white rounded-xl border border-[#EEEEEE] overflow-hidden hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)] transition-all group">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="An artistic medical illustration of a human heart surrounded by healthy foods like walnuts and salmon, representing heart disease prevention, warm professional lighting, clinical excellence style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6JtNpGVG-94SeaQmCx6Lwt9lCy4P4U32ycveaGHsd5_b11w5kNIOZ92Q43dfGTHstTyLUp3rXUjyb4tMtbH--gyelmBxBgPnpDFGkt_13Qqf_QNdG6LA_P0q-Jn4fhMAd2oSoBIL4_lhgRnUaL5kEppHP05R84WASFjZAQkxXuCFWAxSEYLqRGpEPgZguRmxDJiVPPNUlQ5QlbBzTiw4c4-7_3K2_dlH8wDTV55IFVbOjxt1V2h7t"/>
+</div>
+<div class="p-stack-lg">
+<h4 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm leading-snug">Kalp Damar Hastalıklarından Nasıl Beslenmeliyiz?</h4>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-md line-clamp-3">Kalp sağlığını korumak için beslenme alışkanlıklarımızda yapmamız gereken temel değişiklikler ve sağlıklı tarifler.</p>
+<a href="bulten.html" class="text-deep-madder border border-deep-madder px-4 py-2 rounded font-bold text-sm hover:bg-deep-madder hover:text-hospital-white transition-all text-center inline-block">Hemen Oku</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-hospital-white rounded-xl border border-[#EEEEEE] overflow-hidden hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)] transition-all group">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="A focused close-up of a person's lower back with professional medical markings, demonstrating lower back pain diagnostics in a brightly lit, clean clinical setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjQ0VzHldbjJmCwg41xke09PqIf5CTfbDJkMsaOU4NupnxfE38WQasFGLltxQAg42EP8h9y_OsBgV9j_z6xcSLtbQfZU6XokNde9sinsG347oT3_2lrbG4OHILHYTbXmaba0Q0jUU9ud3vkkztFkkWm_xGPLJE8rl-NXrif8rhqgdLfxGLNfTGgjRETgOoL-eKZhO2JGJFA6Ual3EsLKFPnizObA5O0durtV3ohIUr1z-MoWmhF4CG"/>
+</div>
+<div class="p-stack-lg">
+<h4 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm leading-snug">Bel Ağrısı Nedenleri Nelerdir?</h4>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-md line-clamp-3">Bel ağrısı çekenlerin büyük çoğunluğunda neden hemen fıtık olmayabilir. Detaylı tıbbi incelemeler ve ağrı yönetimi.</p>
+<a href="bulten.html" class="text-deep-madder border border-deep-madder px-4 py-2 rounded font-bold text-sm hover:bg-deep-madder hover:text-hospital-white transition-all text-center inline-block">Devamını Oku</a>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-hospital-white rounded-xl border border-[#EEEEEE] overflow-hidden hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)] transition-all group">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="A professional medical technician setting up a sleep study lab with electrodes and sensors, representing professional sleep apnea diagnosis, sophisticated medical technology background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpJseRlITWoPiNBVwktGSLBkS5ShIcEWFqHFvohdD4NgTdrRv6VBNJqRZ4wu0sc0g-8hJKDqKIASHEsCPHE_4_BA8ufQpJ81goOsUtXIA7I8n5uu3AxHPSdw_BEhd-BwupMGZA9j_F9g8qH_6696dkveDPkHFuBiKD8jemKDbjKujgnZSx2Mypxu32FRHGl6DaB7GgcgRMEawaTR_IRP-_C61-mjq_baHKEJM3oakenmqdAcslYzxn"/>
+</div>
+<div class="p-stack-lg">
+<h4 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm leading-snug">Uyku Laboratuarı Hizmete Girmiştir</h4>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-md line-clamp-3">Uyku apnesi ve diğer uyku bozukluklarının teşhisi için en son teknolojiye sahip laboratuvarımız hizmetinizde.</p>
+<a href="bulten.html" class="text-deep-madder border border-deep-madder px-4 py-2 rounded font-bold text-sm hover:bg-deep-madder hover:text-hospital-white transition-all text-center inline-block">İncele</a>
+</div>
+</div>
+<!-- Card 6 (Newsletter Issue) -->
+<div class="bg-charcoal-text rounded-xl p-stack-lg text-hospital-white flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-4xl mb-stack-sm">auto_stories</span>
+<h4 class="font-headline-sm text-headline-sm mb-stack-sm">45. Sayı Haftalık Dergimiz</h4>
+<p class="text-body-sm opacity-80 mb-stack-lg">Haftalık dergimizin tüm sayılarına dijital olarak ulaşabilirsiniz.</p>
+<button class="bg-deep-madder w-full py-3 rounded-lg font-bold hover:bg-opacity-90 transition-all">Arşivi Görüntüle</button>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-section-gap flex justify-center items-center gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded border border-[#EEEEEE] text-slate-gray hover:bg-surface-muted transition-colors" href="#"><span class="material-symbols-outlined">chevron_left</span></a>
+<a class="w-10 h-10 flex items-center justify-center rounded bg-deep-madder text-hospital-white font-bold" href="#">1</a>
+<a class="w-10 h-10 flex items-center justify-center rounded border border-[#EEEEEE] text-slate-gray hover:bg-surface-muted transition-colors" href="#">2</a>
+<a class="w-10 h-10 flex items-center justify-center rounded border border-[#EEEEEE] text-slate-gray hover:bg-surface-muted transition-colors" href="#"><span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface border-t border-[#EEEEEE] w-full">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand & Contact -->
+<div class="col-span-1">
+<span class="font-headline-sm text-headline-sm font-bold text-deep-madder block mb-stack-md">İbni Sina Hastanesi</span>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg">Mareşal Fevzi Çakmak, 7520. Sk. No:1, 80020 Osmaniye Merkez/Osmaniye</p>
+<div class="flex flex-col gap-2">
+<span class="flex items-center gap-2 text-charcoal-text font-bold"><span class="material-symbols-outlined text-deep-madder">call</span> (0328) 813 50 10</span>
+</div>
+</div>
+<!-- Main Menu -->
+<div class="col-span-1">
+<h5 class="font-bold text-charcoal-text mb-stack-md">Ana Menü</h5>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="kurumsal.html">Kurumsal</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a></li>
+</ul>
+</div>
+<!-- Quick Access -->
+<div class="col-span-1">
+<h5 class="font-bold text-charcoal-text mb-stack-md">Hızlı Erişim</h5>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="isbasvurusu.html">İnsan Kaynakları</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="kurumsal.html">SKS Kalite Yönetimi</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">Broşürler</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="ebulten.html">E-Bülten</a></li>
+</ul>
+</div>
+<!-- Legal & Social -->
+<div class="col-span-1">
+<h5 class="font-bold text-charcoal-text mb-stack-md">Bizi Takip Edin</h5>
+<div class="flex gap-4 mb-stack-lg">
+<a class="w-10 h-10 rounded-full border border-[#EEEEEE] flex items-center justify-center text-slate-gray hover:bg-deep-madder hover:text-hospital-white transition-all" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="w-10 h-10 rounded-full border border-[#EEEEEE] flex items-center justify-center text-slate-gray hover:bg-deep-madder hover:text-hospital-white transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">KVK Aydınlatma Metni</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">Çerez Politikası</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#EEEEEE] py-6 text-center">
+<p class="font-body-sm text-body-sm text-slate-gray opacity-80">© 2024 İbni Sina Hastanesi. Tüm Hakları Saklıdır.</p>
+</div>
+</footer>
+
+</body></html>

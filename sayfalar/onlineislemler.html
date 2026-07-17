@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Online İşlemler - İbni Sina Hastanesi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dce0e4",
+                        "surface-container-highest": "#e0e3e1",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#410000",
+                        "surface-variant": "#e0e3e1",
+                        "secondary-fixed": "#dfe3e7",
+                        "primary-container": "#a81e13",
+                        "deep-madder": "#A81E13",
+                        "hospital-white": "#FFFFFF",
+                        "inverse-primary": "#ffb4a8",
+                        "tertiary": "#004654",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#ffdad4",
+                        "on-secondary-container": "#5e6367",
+                        "surface-bright": "#f7faf8",
+                        "slate-gray": "#4E5255",
+                        "on-secondary-fixed": "#171c1f",
+                        "outline": "#8e706b",
+                        "inverse-on-surface": "#eef1ef",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container": "#ebefed",
+                        "action-teal": "#009DBB",
+                        "on-surface-variant": "#5a413c",
+                        "error": "#ba1a1a",
+                        "background": "#f7faf8",
+                        "surface-tint": "#b4271b",
+                        "surface-muted": "#F8FAFB",
+                        "on-tertiary-container": "#68dbfb",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "tertiary-fixed-dim": "#61d5f5",
+                        "on-primary-fixed-variant": "#910904",
+                        "on-primary-container": "#ffbbb1",
+                        "primary": "#840000",
+                        "surface-container-low": "#f1f4f2",
+                        "charcoal-text": "#22272A",
+                        "surface": "#f7faf8",
+                        "on-tertiary-fixed-variant": "#004e5e",
+                        "on-secondary-fixed-variant": "#42474b",
+                        "tertiary-fixed": "#b1ecff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#181c1b",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e6e9e7",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#e2beb9",
+                        "on-background": "#181c1b",
+                        "inverse-surface": "#2d3130",
+                        "on-tertiary-fixed": "#001f27",
+                        "tertiary-container": "#005f72",
+                        "secondary": "#5a5f62",
+                        "surface-dim": "#d7dbd9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "margin-desktop": "40px",
+                        "stack-lg": "24px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "nav-link": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "nav-link": ["15px", {"lineHeight": "24px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .action-card:hover .card-icon {
+            transform: scale(1.1);
+            color: #009DBB;
+        }
+    </style>
+</head>
+<body class="bg-background text-charcoal-text font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-hospital-white border-b border-[#EEEEEE] transition-all duration-300 h-24">
+<div class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center gap-4">
+        <!-- Brand -->
+        <a class="mr-4 flex items-center" href="../index.html">
+            <img src="../ibn-i-sina-hastanesi.jpg" alt="İbni Sina Hastanesi Logo" class="h-16 w-auto object-contain">
+        </a>
+<!-- Tabbed Navigation Links -->
+<div class="hidden lg:flex items-center h-full">
+<a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="../index.html">Anasayfa</a>
+<a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-deep-madder font-bold border-b-2 border-deep-madder px-3 h-full flex items-center" href="onlineislemler.html">Online İşlemler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="iletisim.html">İletişim</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-stack-md">
+<div class="flex items-center gap-2 border-r border-slate-gray/20 pr-4">
+<span class="text-[11px] font-bold text-deep-madder cursor-pointer">TR</span>
+<span class="text-[11px] text-slate-gray">|</span>
+<span class="text-[11px] font-bold text-slate-gray hover:text-deep-madder cursor-pointer transition-colors">EN</span>
+</div>
+<a class="flex items-center gap-1.5 text-deep-madder font-bold text-[13px] ml-2" href="tel:08500000000">
+<span class="material-symbols-outlined text-base">call</span>
+<span class="">0850 000 00 00</span>
+</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="İbni Sina Hastanesi Modern Tesis" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvCvuqCee1lHCZXXdp0HGkGirgyrAfZcycZP-drsUIMcMJDs7nEEHZhEuJwV6mEMvvcrnTsCxGMT31oCiesJXIdSBNUDNxhnZmIa28tsAwutnAvw5lhNr4gjDNlMpQRnhmcXXATtL-l3zX7R3ga1DsUR2D89Mi-XecOlrVdaByG559WB6k9u5V3393XOh6z11RD0TliI49A1D-JhXVbk5WKmAU524ZddQMhNTmuaBrpRH6RewtOyCcX8G0"/>
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="inline-block bg-primary-container/10 text-deep-madder px-3 py-1 rounded-full font-label-caps text-label-caps mb-4">DİJİTAL SAĞLIK SİSTEMİ</span>
+<h1 class="font-headline-lg text-headline-lg text-charcoal-text mb-4">Online İşlemler</h1>
+<p class="font-body-lg text-body-lg text-slate-gray">Tüm Randevu, Muayene ve Sonuçlarınız Parmaklarınızın Ucunda. Hastanemize gelmeden işlemlerinizi güvenle gerçekleştirin.</p>
+</div>
+</div>
+</section>
+<!-- Primary Action Cards (Bento-style Grid) -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Appointment Card -->
+<div class="action-card bg-hospital-white border border-[#EEEEEE] p-10 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)] group flex flex-col justify-between h-full" style="transform: translateY(0px);">
+<div>
+<div class="card-icon bg-surface-container-low w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 text-deep-madder">
+<span class="material-symbols-outlined text-4xl">calendar_month</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-charcoal-text mb-4">Online Randevu</h2>
+<p class="font-body-md text-body-md text-slate-gray mb-8">Dilediğiniz birim ve hekimden, size en uygun tarih ve saati seçerek anında randevu oluşturun.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-deep-madder font-bold font-body-md group-hover:gap-4 transition-all" href="#">
+                        Randevu Sistemine Git
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Results Card -->
+<div class="action-card bg-hospital-white border border-[#EEEEEE] p-10 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)] group flex flex-col justify-between h-full" style="transform: translateY(0px);">
+<div>
+<div class="card-icon bg-surface-container-low w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 text-deep-madder">
+<span class="material-symbols-outlined text-4xl">lab_research</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-charcoal-text mb-4">Sonuç Sorgulama</h2>
+<p class="font-body-md text-body-md text-slate-gray mb-8">Radyoloji ve Laboratuvar sonuçlarınıza dilediğiniz yerden erişin, geçmiş tahlillerinizi inceleyin.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-deep-madder font-bold font-body-md group-hover:gap-4 transition-all" href="#">
+                        Tahlil Sonuçlarını Sorgula
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Web Şifresi Information Section -->
+<section class="bg-surface-muted py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 relative">
+<div class="rounded-2xl overflow-hidden shadow-xl aspect-square">
+<img alt="Sağlık Raporu ve Sonuç Bilgilendirmesi" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfI1Q9g1wl-cGqyRKijIaPbsQ_GEdOGtFa2Y3YWDwNjBluW3Q2iFSX-3S4ruW4vUDlVShqMF9ls7kraLAPSl1rnlRPOGswOpso4hGs6-16UnVeEau1ojpPtN2TNjuAo4JYPtbd3fQXQAWDqqbKU9fwsfYnVriFJqTE2bV1L9p1_2IsoRCihj0EqL6vyN3aW4In-p3cj2-yINhOkagfKYJiSPwdK2hb_yklE6u5LJ4O2z-rvK0kuIob"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-action-teal p-8 rounded-xl shadow-lg hidden md:block">
+<span class="material-symbols-outlined text-hospital-white text-5xl">security</span>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-stack-lg pl-0 lg:pl-12">
+<h2 class="font-headline-md text-headline-md text-charcoal-text">Web Şifresi Hakkında Bilgilendirme</h2>
+<p class="font-body-lg text-body-lg text-slate-gray">Hasta mahremiyeti ve veri güvenliği en önemli önceliğimizdir. Online hizmetlerimizden yararlanmak için size özel tanımlanmış bir şifre gereklidir.</p>
+<div class="space-y-stack-md">
+<div class="flex gap-4 items-start">
+<div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-deep-madder/10 flex items-center justify-center text-deep-madder">
+<span class="material-symbols-outlined text-[20px]">person_pin_circle</span>
+</div>
+<div>
+<h3 class="font-body-md text-body-md font-bold">Şifre Temini</h3>
+<p class="font-body-sm text-body-sm text-slate-gray">Güvenlik gereği Web Şifresi, sadece hastanemiz bankolarından şahsen müracaat edilerek alınabilmektedir.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-deep-madder/10 flex items-center justify-center text-deep-madder">
+<span class="material-symbols-outlined text-[20px]">password</span>
+</div>
+<div>
+<h3 class="font-body-md text-body-md font-bold">İlk Giriş ve Güncelleme</h3>
+<p class="font-body-sm text-body-sm text-slate-gray">Hastanemizden aldığınız geçici şifrenizle ilk giriş yapıldığında, sistem otomatik olarak şifre değişikliği isteyecektir.</p>
+</div>
+</div>
+<div class="bg-hospital-white p-6 border border-[#EEEEEE] rounded-lg mt-6">
+<h4 class="font-label-caps text-label-caps text-deep-madder mb-3 uppercase">Güvenlik Gereksinimleri</h4>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-slate-gray">
+<span class="material-symbols-outlined text-action-teal text-[18px]">check_circle</span>
+                                        En az 6 karakter uzunluğu
+                                    </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-slate-gray">
+<span class="material-symbols-outlined text-action-teal text-[18px]">check_circle</span>
+                                        En az bir büyük harf (A-Z)
+                                    </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-slate-gray">
+<span class="material-symbols-outlined text-action-teal text-[18px]">check_circle</span>
+                                        En az bir küçük harf (a-z)
+                                    </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-slate-gray">
+<span class="material-symbols-outlined text-action-teal text-[18px]">check_circle</span>
+                                        En az bir rakam (0-9)
+                                    </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+<div class="bg-charcoal-text rounded-2xl p-12 text-center text-on-primary relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-deep-madder/10 rounded-full -mr-32 -mt-32"></div>
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md mb-6">Herhangi Bir Sorunuz mu Var?</h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim max-w-2xl mx-auto mb-10">Online işlemlerle ilgili teknik destek almak veya bilgi edinmek için bize ulaşabilirsiniz.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-deep-madder hover:bg-primary text-on-primary px-8 py-4 rounded-lg font-bold transition-all">444 0 541</button>
+<button class="border border-white/30 hover:bg-white/10 text-on-primary px-8 py-4 rounded-lg font-bold transition-all">Sıkça Sorulan Sorular</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface border-t border-[#EEEEEE]">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="space-y-6">
+<a class="font-headline-sm text-headline-sm font-bold text-deep-madder" href="../index.html">İbni Sina Hastanesi</a>
+<p class="font-body-sm text-body-sm text-slate-gray">Osmaniye'nin öncü sağlık kuruluşu olarak, ileri tıp teknolojileri ve uzman kadromuzla yanınızdayız.</p>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-charcoal-text">Hızlı Bağlantılar</h4>
+<ul class="space-y-4">
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">Anlaşmalı Kurumlar</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="onlineislemler.html">Laboratuvar Sonuçları</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-charcoal-text">Kurumsal</h4>
+<ul class="space-y-4">
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="iletisim.html">İletişim</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">KVK Aydınlatma Metni</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">Çerez Politikası</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">Sıkça Sorulan Sorular</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-charcoal-text">İletişim Bilgileri</h4>
+<address class="not-italic space-y-4 font-body-sm text-body-sm text-slate-gray">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                        Adnan Menderes Mah. 80010 Sk. Osmaniye
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">phone</span>
+                        444 0 541
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+                        info@ibnisinahastanesi.com.tr
+                    </p>
+</address>
+</div>
+</div>
+<div class="border-t border-[#EEEEEE] py-6 text-center">
+<p class="font-body-sm text-body-sm text-slate-gray">© 2024 İbni Sina Hastanesi. Tüm Hakları Saklıdır.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for cards
+        document.querySelectorAll('.action-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

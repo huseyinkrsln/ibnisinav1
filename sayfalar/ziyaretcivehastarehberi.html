@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ziyaretçi ve Hasta Rehberi | İbni Sina Hastanesi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#410000",
+                        "inverse-on-surface": "#eef1ef",
+                        "surface-muted": "#F8FAFB",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#d7dbd9",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e6e9e7",
+                        "surface-container": "#ebefed",
+                        "surface-tint": "#b4271b",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#e2beb9",
+                        "inverse-primary": "#ffb4a8",
+                        "on-tertiary-fixed": "#001f27",
+                        "tertiary-container": "#005f72",
+                        "on-secondary-fixed": "#171c1f",
+                        "tertiary": "#004654",
+                        "background": "#f7faf8",
+                        "on-tertiary-container": "#68dbfb",
+                        "on-surface-variant": "#5a413c",
+                        "tertiary-fixed-dim": "#61d5f5",
+                        "secondary-fixed": "#dfe3e7",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#42474b",
+                        "outline": "#8e706b",
+                        "tertiary-fixed": "#b1ecff",
+                        "on-secondary-container": "#5e6367",
+                        "surface-container-low": "#f1f4f2",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "hospital-white": "#FFFFFF",
+                        "on-error": "#ffffff",
+                        "deep-madder": "#A81E13",
+                        "on-error-container": "#93000a",
+                        "on-background": "#181c1b",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container-highest": "#e0e3e1",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f7faf8",
+                        "on-tertiary-fixed-variant": "#004e5e",
+                        "surface": "#f7faf8",
+                        "slate-gray": "#4E5255",
+                        "on-primary-container": "#ffbbb1",
+                        "primary-container": "#a81e13",
+                        "charcoal-text": "#22272A",
+                        "primary": "#840000",
+                        "secondary": "#5a5f62",
+                        "secondary-container": "#dce0e4",
+                        "inverse-surface": "#2d3130",
+                        "surface-variant": "#e0e3e1",
+                        "action-teal": "#009DBB",
+                        "primary-fixed": "#ffdad4",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#181c1b",
+                        "on-primary-fixed-variant": "#910904"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "24px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "label-caps": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "nav-link": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "nav-link": ["15px", {"lineHeight": "24px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .guide-card:hover .icon-container {
+            background-color: theme('colors.action-teal');
+            color: white;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-hospital-white border-b border-[#EEEEEE] transition-all duration-300 h-24">
+    <div class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center gap-4">
+        <!-- Brand -->
+        <a class="mr-4 flex items-center" href="../index.html">
+            <img src="../ibn-i-sina-hastanesi.jpg" alt="İbni Sina Hastanesi Logo" class="h-16 w-auto object-contain">
+        </a>
+        <!-- Tabbed Navigation Links -->
+        <div class="hidden lg:flex items-center h-full">
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="../index.html">Anasayfa</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="onlineislemler.html">Online İşlemler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="iletisim.html">İletişim</a>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center gap-stack-md">
+            <div class="flex items-center gap-2 border-r border-slate-gray/20 pr-4">
+                <span class="text-[11px] font-bold text-deep-madder cursor-pointer">TR</span>
+                <span class="text-[11px] text-slate-gray">|</span>
+                <span class="text-[11px] font-bold text-slate-gray hover:text-deep-madder cursor-pointer transition-colors">EN</span>
+            </div>
+            <a class="flex items-center gap-1.5 text-deep-madder font-bold text-[13px] ml-2" href="tel:08500000000">
+                <span class="material-symbols-outlined text-base">call</span>
+                <span class="">0850 000 00 00</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[480px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A serene and modern hospital patient room with a large window showing a green landscape. A professional elderly patient is resting comfortably in a high-tech medical bed. The room is designed with clinical precision using a sophisticated teal and white color palette, featuring bright, soft lighting that creates a peaceful and healing environment. The visual style is Corporate Modernism with clean lines and premium medical equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg-jbIcpJrfYdwC9YugOAWpuKWO5dLlT_n3t4fNh7caVZnOzcfgKejcEXQReIXO8sprxvu_x0DRObuB3W5KheHEQeQ97wnKnUbSYvFGMTJzrh9OcQlKq39kPZXyfgmFaSQR5D7qyuJVFJe-GOfBYeEK75Ym0T6niOXDMjgSWi96b6Vs5AM5z-NpexynZ3B8aSvJrr5pYE8Wjzj7pHsZZfuY0UZPHxC79haXaimag21reKnJ8dA8rMR"/>
+<div class="absolute inset-0 bg-gradient-to-r from-deep-madder/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl text-hospital-white">
+<span class="font-label-caps text-label-caps uppercase tracking-widest mb-4 block opacity-90">Hasta ve Yakınları İçin Bilgilendirme</span>
+<h1 class="font-headline-lg text-headline-lg mb-6">Ziyaretçi ve Hasta Rehberi</h1>
+<p class="font-body-lg text-body-lg opacity-90 leading-relaxed">
+                        Hastalarımızın iyileşme sürecini desteklemek ve hastanemizde geçireceğiniz süreyi daha konforlu hale getirmek için hazırladığımız bu rehberde tüm bilgilere ulaşabilirsiniz.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Rules & Hours Highlight -->
+<section class="py-stack-lg -mt-16 relative z-20">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-hospital-white border border-[#EEEEEE] rounded-xl shadow-xl p-8 grid md:grid-cols-3 gap-gutter items-center">
+<div class="flex items-start gap-4">
+<div class="bg-action-teal/10 p-3 rounded-full text-action-teal">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-2">Ziyaret Saatleri</h3>
+<div class="space-y-1">
+<p class="font-body-sm text-body-sm"><strong class="text-deep-madder">Sabah:</strong> 09:30 - 10:30</p>
+<p class="font-body-sm text-body-sm"><strong class="text-deep-madder">Öğle:</strong> 14:30 - 15:30</p>
+<p class="font-body-sm text-body-sm"><strong class="text-deep-madder">Akşam:</strong> 20:30 - 21:30</p>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-4 border-l border-r border-[#EEEEEE] px-gutter hidden md:flex">
+<div class="bg-deep-madder/10 p-3 rounded-full text-deep-madder">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">warning</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-2">Kritik Kurallar</h3>
+<p class="font-body-sm text-body-sm text-slate-gray">Aynı anda 2 kişiden fazla ziyaretçi kabul edilmez. 12 yaş altı çocukları lütfen getirmeyiniz.</p>
+</div>
+</div>
+<div class="flex justify-end">
+<a class="flex items-center gap-4 bg-deep-madder text-hospital-white px-8 py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all" href="tel:03288135010">
+<span class="material-symbols-outlined">call</span>
+<div class="text-left">
+<span class="block text-xs uppercase opacity-80">Randevu &amp; Bilgi Hattı</span>
+<span class="text-xl">0328 813 50 10</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Guide Content -->
+<section class="py-section-gap bg-surface-muted">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-charcoal-text mb-4">Hizmetlerimiz ve Kurallarımız</h2>
+<div class="w-24 h-1 bg-action-teal mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Flower -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-surface-muted rounded-lg flex items-center justify-center text-deep-madder mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">local_florist</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Çiçek</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Enfeksiyon riski ve oksijen seviyeleri nedeniyle canlı çiçek kabul edilmemektedir. Yoğun bakım servislerine hiçbir şekilde çiçek ve gıda alınmaz.</p>
+</div>
+<!-- Phone -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-surface-muted rounded-lg flex items-center justify-center text-deep-madder mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">phone_in_talk</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Telefon</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Her odada telefon bulunmaktadır. Yakınlarınız size oda telefon numaranızdan doğrudan ulaşabilirler.</p>
+</div>
+<!-- Companion -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-surface-muted rounded-lg flex items-center justify-center text-deep-madder mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Refakat</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Her hasta için bir refakatçi eşlik edebilir. Güvenliğiniz için refakatçi kartınızı takmayı lütfen unutmayınız.</p>
+</div>
+<!-- Prayer Room -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-surface-muted rounded-lg flex items-center justify-center text-deep-madder mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">mosque</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Mescit</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Hastanemizin bodrum katında bulunan mescit ile hasta yakını ve personelimize ibadet imkanı sunulmaktadır.</p>
+</div>
+<!-- TV -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-surface-muted rounded-lg flex items-center justify-center text-deep-madder mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">tv</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Televizyon</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Odalarımızda uzaktan kumandalı TV mevcuttur. Diğer hastaları rahatsız etmemek adına ses seviyesine özen gösteriniz.</p>
+</div>
+<!-- Emergency -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group border-action-teal/20">
+<div class="icon-container w-14 h-14 bg-action-teal/10 rounded-lg flex items-center justify-center text-action-teal mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">medical_services</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Acil Servis</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Nöbetçi hekim kadromuz ile her türlü sağlık ihtiyacınıza 7 gün 24 saat kesintisiz hizmet vermekteyiz.</p>
+</div>
+<!-- Nursing -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-surface-muted rounded-lg flex items-center justify-center text-deep-madder mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">person_pin</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Hemşirelik</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Yatak başucundaki çağrı butonları ile 7/24 hemşirelerimize ulaşabilirsiniz. Sorularınız için servis sorumlu hemşiresi ile görüşebilirsiniz.</p>
+</div>
+<!-- Cafeteria & Food -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-surface-muted rounded-lg flex items-center justify-center text-deep-madder mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Kantin &amp; Yemek</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Kantinimiz 08:00 - 23:00 arası açıktır. Yemek servisleri diyetisyen kontrolünde hastane mutfağımızdan sağlanmaktadır.</p>
+</div>
+<!-- Smoking Policy -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-error/20 transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-error/10 rounded-lg flex items-center justify-center text-error mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">smoke_free</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Sigara Politikası</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">4207 sayılı kanun gereği hastane kapalı alanlarında ve kantin içerisinde sigara içilmesi kesinlikle yasaktır.</p>
+</div>
+<!-- Discharge -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-surface-muted rounded-lg flex items-center justify-center text-deep-madder mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">logout</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Taburcu İşlemleri</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Doktorunuzun onayı sonrası personelimiz işlemlerinizi hızlıca sonuçlandırmak için size yardımcı olacaktır.</p>
+</div>
+<!-- Security -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-surface-muted rounded-lg flex items-center justify-center text-deep-madder mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">security</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Güvenlik</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Hastanemiz 24 saat kamera sistemi ve güvenlik personeli ile korunmaktadır. Kıymetli eşyalarınızı lütfen açıkta bırakmayınız.</p>
+</div>
+<!-- Technical Services -->
+<div class="guide-card bg-hospital-white p-8 rounded-xl border border-[#EEEEEE] transition-all duration-300 hover:shadow-lg group">
+<div class="icon-container w-14 h-14 bg-surface-muted rounded-lg flex items-center justify-center text-deep-madder mb-6 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">settings_suggest</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Teknik Hizmetler</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Odanızdaki donanımlar (TV, buzdolabı vb.) ile ilgili arızalar için teknik ekibimiz 24 saat hizmetinizdedir.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Informative Panel -->
+<section class="py-section-gap bg-hospital-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-action-teal/10 rounded-full blur-3xl"></div>
+<h2 class="font-headline-md text-headline-md mb-8">Görüşleriniz Bizim İçin Değerli</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 bg-surface-muted flex items-center justify-center rounded-lg text-deep-madder">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<div>
+<h4 class="font-bold text-charcoal-text mb-1">Dilek ve Şikayet Kutuları</h4>
+<p class="text-slate-gray font-body-sm">Servislerde bulunan kutular aracılığıyla önerilerinizi bize ulaştırabilirsiniz.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 bg-surface-muted flex items-center justify-center rounded-lg text-deep-madder">
+<span class="material-symbols-outlined">how_to_reg</span>
+</div>
+<div>
+<h4 class="font-bold text-charcoal-text mb-1">Hasta Hakları Birimi</h4>
+<p class="text-slate-gray font-body-sm">Sorumlu birimimizi ziyaret edebilir veya görüşlerinizi sözel olarak iletebilirsiniz.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-12 h-12 bg-surface-muted flex items-center justify-center rounded-lg text-deep-madder">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<div>
+<h4 class="font-bold text-charcoal-text mb-1">Bilgilendirme Panoları</h4>
+<p class="text-slate-gray font-body-sm">Kafeteryada bulunan LCD ekranlardan ameliyat hastalarıyla ilgili anlık bilgi alabilirsiniz.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-muted p-12 rounded-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-[160px]">health_and_safety</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-6 text-deep-madder">Önemli Uyarı!</h3>
+<ul class="space-y-4 font-body-md text-slate-gray">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-action-teal mt-1">check_circle</span>
+<span>Lütfen sağlığınızı korumak için dışarıdan yiyecek ve içecek kabul etmeyiniz.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-action-teal mt-1">check_circle</span>
+<span>Evcil hayvanlar hastanemize hijyen kuralları gereği kabul edilmemektedir.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-action-teal mt-1">check_circle</span>
+<span>Ziyaret süresini 10 dakika ile sınırlandırmanız hastamızın istirahati için önemlidir.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-action-teal mt-1">check_circle</span>
+<span>Kıymetli eşyalarınızın güvenliğinden şahsen sorumlu olduğunuzu hatırlatırız.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container w-full py-stack-lg border-t border-[#EEEEEE] text-charcoal-text">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-deep-madder mb-6">
+<a href="../index.html">İbni Sina Hastanesi</a>
+</div>
+<p class="font-body-sm text-body-sm text-slate-gray mb-6">Modern tıp teknolojileri ve uzman hekim kadromuzla sağlığınız için buradayız.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-hospital-white flex items-center justify-center text-deep-madder hover:bg-deep-madder hover:text-white transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-xl">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-hospital-white flex items-center justify-center text-deep-madder hover:bg-deep-madder hover:text-white transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-hospital-white flex items-center justify-center text-deep-madder hover:bg-deep-madder hover:text-white transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-xl">photo_camera</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-charcoal-text mb-6">Hızlı Erişim</h4>
+<ul class="space-y-3 font-body-sm text-body-sm">
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="#">KVKK Aydınlatma Metni</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="#">Hasta Hakları</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="isbasvurusu.html">İnsan Kaynakları</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="kurumsal.html">SKS Kalite Yönetimi</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-charcoal-text mb-6">Hizmetlerimiz</h4>
+<ul class="space-y-3 font-body-sm text-body-sm">
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="#">Check-up Paketleri</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="onlineislemler.html">Online Laboratuvar</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-charcoal-text mb-6">İletişim</h4>
+<div class="space-y-4 font-body-sm text-body-sm text-slate-gray">
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-deep-madder text-sm">location_on</span>
+                        Mareşal Fevzi Çakmak, 7520. Sk. No:1, 80020 Osmaniye Merkez/Osmaniye
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-deep-madder text-sm">call</span>
+                        (0328) 813 50 10
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-deep-madder text-sm">mail</span>
+                        info@ibnisinahastanesi.com.tr
+                    </p>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-stack-lg pt-stack-lg border-t border-[#EEEEEE] text-center opacity-90">
+<p class="font-body-sm text-body-sm text-slate-gray">© 2024 İbni Sina Hastanesi. Tüm Hakları Saklıdır.</p>
+</div>
+</footer>
+<script>
+        // Smooth shadow interaction on scroll for Navbar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.add('shadow-sm');
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

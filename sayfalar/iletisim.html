@@ -1,0 +1,329 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>İletişim | İbni Sina Hastanesi</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e0e3e1",
+                        "charcoal-text": "#22272A",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#001f27",
+                        "inverse-surface": "#2d3130",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#a81e13",
+                        "background": "#f7faf8",
+                        "slate-gray": "#4E5255",
+                        "on-error-container": "#93000a",
+                        "hospital-white": "#FFFFFF",
+                        "primary-fixed": "#ffdad4",
+                        "surface-container-low": "#f1f4f2",
+                        "surface-bright": "#f7faf8",
+                        "tertiary-container": "#005f72",
+                        "outline-variant": "#e2beb9",
+                        "on-primary-container": "#ffbbb1",
+                        "surface-container-highest": "#e0e3e1",
+                        "on-primary-fixed-variant": "#910904",
+                        "tertiary-fixed-dim": "#61d5f5",
+                        "tertiary": "#004654",
+                        "secondary-container": "#dce0e4",
+                        "on-background": "#181c1b",
+                        "inverse-on-surface": "#eef1ef",
+                        "secondary-fixed": "#dfe3e7",
+                        "on-secondary-fixed": "#171c1f",
+                        "surface-dim": "#d7dbd9",
+                        "inverse-primary": "#ffb4a8",
+                        "action-teal": "#009DBB",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#410000",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container-high": "#e6e9e7",
+                        "surface-container": "#ebefed",
+                        "surface": "#f7faf8",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#5a413c",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "on-tertiary-container": "#68dbfb",
+                        "outline": "#8e706b",
+                        "on-secondary-fixed-variant": "#42474b",
+                        "secondary": "#5a5f62",
+                        "on-surface": "#181c1b",
+                        "surface-muted": "#F8FAFB",
+                        "tertiary-fixed": "#b1ecff",
+                        "primary": "#840000",
+                        "on-secondary-container": "#5e6367",
+                        "deep-madder": "#A81E13",
+                        "surface-tint": "#b4271b",
+                        "on-tertiary-fixed-variant": "#004e5e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "24px",
+                        "stack-md": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "nav-link": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-sm": ["Montserrat"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "nav-link": ["15px", {"lineHeight": "24px", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            border-color: #009DBB !important;
+            box-shadow: 0 0 0 2px rgba(0, 157, 187, 0.1);
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-charcoal-text font-body-md">
+<!-- TopNavBar --><nav class="fixed top-0 w-full z-50 bg-hospital-white border-b border-[#EEEEEE] transition-all duration-300 h-24">
+    <div class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center gap-4">
+        <!-- Brand -->
+        <a class="mr-4 flex items-center" href="../index.html">
+            <img src="../ibn-i-sina-hastanesi.jpg" alt="İbni Sina Hastanesi Logo" class="h-16 w-auto object-contain">
+        </a>
+        <!-- Tabbed Navigation Links -->
+        <div class="hidden lg:flex items-center h-full">
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="../index.html">Anasayfa</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="onlineislemler.html">Online İşlemler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-deep-madder font-bold border-b-2 border-deep-madder px-3 h-full flex items-center" href="iletisim.html">İletişim</a>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center gap-stack-md">
+            <div class="flex items-center gap-2 border-r border-slate-gray/20 pr-4">
+                <span class="text-[11px] font-bold text-deep-madder cursor-pointer">TR</span>
+                <span class="text-[11px] text-slate-gray">|</span>
+                <span class="text-[11px] font-bold text-slate-gray hover:text-deep-madder cursor-pointer transition-colors">EN</span>
+            </div>
+            <a class="flex items-center gap-1.5 text-deep-madder font-bold text-[13px] ml-2" href="tel:08500000000">
+                <span class="material-symbols-outlined text-base">call</span>
+                <span class="">0850 000 00 00</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<main class="pt-20">
+<!-- Hero / Page Title -->
+<section class="relative h-[300px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" data-alt="A professional, wide-angle interior shot of a modern hospital lobby at İbni Sina Hastanesi. The scene is bright with soft natural light streaming through large glass windows, illuminating pristine white surfaces and refined wooden accents. The atmosphere is calm and clinical, suggesting high-tech medical precision and empathetic care in a corporate modernist architectural setting." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB-FU-A7bZ2g4m2F8Efz8woQ7AP-G_VBgnYYkzc2JGUNv3SghDzQNRXdvGg-gwh6ceS0Bhq9eRSGI0qLZmfEwym2yKaSsTYAp74lg-ykdzUjg5x__md3KARcs3KEzSHUqjFWNFVRyrlZCoi7qpMZ2Faa0xU5ILiawLnrHGHTMoKXfCy--iT-hW3HBz6XEsj-DzfMz1Lc6xJVZYFzNptaYNT9wzfhihJdwfP0r_RU3XSE8y571cCOFsL&quot;);"></div>
+<div class="absolute inset-0 bg-charcoal-text/40 z-10"></div>
+<div class="relative z-20 text-center text-hospital-white">
+<h1 class="font-headline-lg text-headline-lg mb-4">İletişim</h1>
+<p class="font-body-lg text-body-lg opacity-90">Size yardımcı olmak için buradayız.</p>
+</div>
+</section>
+<!-- Contact Information Grid & Form -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Info Grid (Left Side) -->
+<div class="lg:col-span-4 flex flex-col space-y-stack-lg">
+<h2 class="font-headline-md text-headline-md text-deep-madder">İletişim Bilgileri</h2>
+<!-- Address Card -->
+<div class="p-stack-lg bg-hospital-white border border-[#EEEEEE] rounded-lg transition-shadow hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)]">
+<div class="flex items-start space-x-stack-md">
+<span class="material-symbols-outlined text-deep-madder mt-1" data-icon="location_on">location_on</span>
+<div>
+<h3 class="font-label-caps text-label-caps text-slate-gray mb-1 uppercase">ADRES</h3>
+<p class="font-body-md text-body-md">Mareşal Fevzi Çakmak, 7520. Sk. No:1, 80020 Osmaniye Merkez/Osmaniye</p>
+</div>
+</div>
+</div>
+<!-- Phone Card -->
+<div class="p-stack-lg bg-hospital-white border border-[#EEEEEE] rounded-lg transition-shadow hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)]">
+<div class="flex items-start space-x-stack-md">
+<span class="material-symbols-outlined text-deep-madder mt-1" data-icon="call">call</span>
+<div>
+<h3 class="font-label-caps text-label-caps text-slate-gray mb-1 uppercase">TELEFON</h3>
+<p class="font-body-md text-body-md">(0328) 813 50 10</p>
+</div>
+</div>
+</div>
+<!-- E-mail Card -->
+<div class="p-stack-lg bg-hospital-white border border-[#EEEEEE] rounded-lg transition-shadow hover:shadow-[0_8px_24px_rgba(34,39,42,0.1)]">
+<div class="flex items-start space-x-stack-md">
+<span class="material-symbols-outlined text-deep-madder mt-1" data-icon="mail">mail</span>
+<div>
+<h3 class="font-label-caps text-label-caps text-slate-gray mb-1 uppercase">E-POSTA</h3>
+<p class="font-body-md text-body-md">info@ibnisinahastanesi.com.tr</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form (Right Side) -->
+<div class="lg:col-span-8 bg-hospital-white p-stack-lg border border-[#EEEEEE] rounded-lg shadow-[0_8px_24px_rgba(34,39,42,0.05)]">
+<h2 class="font-headline-md text-headline-md text-charcoal-text mb-stack-lg">İletişim Formu</h2>
+<form class="space-y-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="flex flex-col space-y-2">
+<label class="font-label-caps text-label-caps text-slate-gray">AD SOYAD</label>
+<input class="bg-hospital-white border border-[#EEEEEE] p-3 rounded form-input-focus font-body-md" placeholder="Adınız Soyadınız" type="text">
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-caps text-label-caps text-slate-gray">T.C. KİMLİK</label>
+<input class="bg-hospital-white border border-[#EEEEEE] p-3 rounded form-input-focus font-body-md" placeholder="T.C. Kimlik Numaranız" type="text">
+</div>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-caps text-label-caps text-slate-gray">E-POSTA</label>
+<input class="bg-hospital-white border border-[#EEEEEE] p-3 rounded form-input-focus font-body-md" placeholder="E-posta Adresiniz" type="email">
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-caps text-label-caps text-slate-gray">MESAJ</label>
+<textarea class="bg-hospital-white border border-[#EEEEEE] p-3 rounded form-input-focus font-body-md resize-none" placeholder="Size nasıl yardımcı olabiliriz?" rows="4"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="flex flex-col space-y-2">
+<label class="font-label-caps text-label-caps text-slate-gray">GÜVENLİK KODU</label>
+<div class="flex space-x-stack-sm">
+<div class="bg-surface-variant flex items-center justify-center w-32 h-12 rounded font-bold tracking-widest text-deep-madder border border-[#EEEEEE]">8K2M9</div>
+<input class="bg-hospital-white border border-[#EEEEEE] p-3 rounded form-input-focus font-body-md flex-1" placeholder="Kodu girin" type="text">
+</div>
+</div>
+</div>
+<div class="flex items-start space-x-3 py-2">
+<input class="mt-1 w-4 h-4 text-action-teal border-[#EEEEEE] rounded focus:ring-action-teal" id="kvkk" type="checkbox">
+<label class="font-body-sm text-body-sm text-slate-gray" for="kvkk">
+                                "Elektronik Ticaret Yasası" gereği hizmetler ve kampanya bilgilendirmelerinden e-posta, SMS ve telefon aramaları ile haberdar olmak istiyorum.
+                            </label>
+</div>
+<div class="flex justify-end mt-4">
+<button class="bg-deep-madder text-hospital-white font-label-caps px-10 py-4 rounded-lg hover:bg-primary-container transition-colors shadow-md active:scale-95 duration-200" type="submit">
+                                GÖNDER
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full">
+<div class="max-w-container-max mx-auto px-margin-desktop mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-charcoal-text border-l-4 border-deep-madder pl-4">Haritadaki Yerimiz</h2>
+</div>
+<div class="w-full h-[500px] bg-surface-container overflow-hidden">
+<div class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer flex items-center justify-center bg-cover bg-center bg-no-repeat" data-alt="A large, high-resolution satellite map view of Osmaniye city center, showing detailed city blocks, green spaces, and the specific urban layout of Mareşal Fevzi Çakmak neighborhood. The map is presented in a modern, clean digital interface style with a subtle grayscale overlay to match the clinical medical aesthetic of the hospital brand." data-location="Osmaniye Merkez, Mareşal Fevzi Çakmak" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuADYxBhITocVGA5FRpRdM5XFnNT1jWjiTI29nhjpIhsOd3iqfbzl2RVJ-X3dJ7ElYU9ViCHTYj6kxWmZC5f4V3y0zZSC6BqajcG9jhnO2e_OobZA4RwcqysxE3rhQBx9HqaK2gn07f0zv7_d0KnP-QuIgBIouPZymOHLRb4Q1r7LnO_9o_wMUEzLPAaOwQZ8_8C-Vok6u8Bv9XR9PP2PqNJc3uwBNUw4TwA6vFouzObdYy5TBcbzMg6&quot;);">
+<div class="p-6 bg-hospital-white rounded shadow-xl border border-deep-madder flex items-center space-x-3">
+<span class="material-symbols-outlined text-deep-madder text-4xl" data-icon="hospital">hospital</span>
+<div>
+<p class="font-bold text-deep-madder">İbni Sina Hastanesi</p>
+<p class="text-xs text-slate-gray">Buradayız</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface border-t border-[#EEEEEE]">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand Column -->
+<div class="flex flex-col space-y-stack-md">
+<a class="font-headline-sm text-headline-sm font-bold text-deep-madder" href="../index.html">İbni Sina Hastanesi</a>
+<p class="font-body-sm text-body-sm text-slate-gray">Osmaniye'nin güvenilir sağlık merkezi olarak modern tıbbın tüm imkanlarıyla yanınızdayız.</p>
+<div class="flex space-x-stack-sm pt-2">
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container text-slate-gray hover:bg-deep-madder hover:text-hospital-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="facebook">facebook</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container text-slate-gray hover:bg-deep-madder hover:text-hospital-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="share">share</span>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="flex flex-col space-y-stack-md">
+<h4 class="font-label-caps text-label-caps text-deep-madder">ANA MENÜ</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="kurumsal.html">Kurumsal</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a></li>
+</ul>
+</div>
+<!-- Fast Access -->
+<div class="flex flex-col space-y-stack-md">
+<h4 class="font-label-caps text-label-caps text-deep-madder">HIZLI ERİŞİM</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="isbasvurusu.html">İnsan Kaynakları</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="kurumsal.html">Kalite Yönetimi</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">Kişisel Verilerin Korunması</a></li>
+</ul>
+</div>
+<!-- Legal & Contact Links -->
+<div class="flex flex-col space-y-stack-md">
+<h4 class="font-label-caps text-label-caps text-deep-madder">İLETİŞİM</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">Sıkça Sorulan Sorular</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">KVK Aydınlatma Metni</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-slate-gray hover:text-action-teal transition-colors" href="#">Çerez Politikası</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-[#EEEEEE] text-center">
+<p class="font-body-sm text-body-sm text-slate-gray">© 2024 İbni Sina Hastanesi. Tüm Hakları Saklıdır.</p>
+</div>
+</footer>
+<script>
+        // Simple form interaction
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'GÖNDERİLİYOR...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Mesajınız başarıyla iletildi. En kısa sürede size dönüş yapılacaktır.');
+                btn.innerText = originalText;
+                btn.disabled = false;
+                e.target.reset();
+            }, 1500);
+        });
+    </script>
+
+
+
+</body></html>

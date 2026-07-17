@@ -1,0 +1,421 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="tr"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "secondary-container": "#dce0e4",
+                            "tertiary-fixed": "#b1ecff",
+                            "on-primary-fixed": "#410000",
+                            "surface-bright": "#f7faf8",
+                            "on-primary-container": "#ffbbb1",
+                            "hospital-white": "#FFFFFF",
+                            "on-secondary": "#ffffff",
+                            "surface-container-lowest": "#ffffff",
+                            "surface-container-low": "#f1f4f2",
+                            "charcoal-text": "#22272A",
+                            "on-secondary-fixed": "#171c1f",
+                            "on-tertiary-fixed": "#001f27",
+                            "on-tertiary-fixed-variant": "#004e5e",
+                            "secondary": "#5a5f62",
+                            "primary-fixed": "#ffdad4",
+                            "outline": "#8e706b",
+                            "on-error": "#ffffff",
+                            "primary": "#840000",
+                            "tertiary": "#004654",
+                            "secondary-fixed-dim": "#c3c7cb",
+                            "surface-tint": "#b4271b",
+                            "surface-container": "#ebefed",
+                            "tertiary-container": "#005f72",
+                            "inverse-surface": "#2d3130",
+                            "deep-madder": "#A81E13",
+                            "primary-fixed-dim": "#ffb4a8",
+                            "on-secondary-fixed-variant": "#42474b",
+                            "surface-muted": "#F8FAFB",
+                            "on-primary-fixed-variant": "#910904",
+                            "inverse-primary": "#ffb4a8",
+                            "primary-container": "#a81e13",
+                            "surface-container-highest": "#e0e3e1",
+                            "background": "#f7faf8",
+                            "error": "#ba1a1a",
+                            "on-primary": "#ffffff",
+                            "surface": "#f7faf8",
+                            "secondary-fixed": "#dfe3e7",
+                            "surface-container-high": "#e6e9e7",
+                            "on-tertiary": "#ffffff",
+                            "outline-variant": "#e2beb9",
+                            "on-error-container": "#93000a",
+                            "action-teal": "#009DBB",
+                            "inverse-on-surface": "#eef1ef",
+                            "on-tertiary-container": "#68dbfb",
+                            "on-surface-variant": "#5a413c",
+                            "on-surface": "#181c1b",
+                            "slate-gray": "#4E5255",
+                            "surface-dim": "#d7dbd9",
+                            "surface-variant": "#e0e3e1",
+                            "error-container": "#ffdad6",
+                            "tertiary-fixed-dim": "#61d5f5",
+                            "on-background": "#181c1b"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "stack-md": "16px",
+                            "stack-lg": "24px",
+                            "margin-desktop": "40px",
+                            "container-max": "1280px",
+                            "stack-sm": "8px",
+                            "margin-mobile": "16px",
+                            "section-gap": "80px",
+                            "gutter": "24px"
+                        },
+                        "fontFamily": {
+                            "nav-link": ["Inter"],
+                            "headline-lg": ["Montserrat"],
+                            "headline-lg-mobile": ["Montserrat"],
+                            "body-lg": ["Inter"],
+                            "headline-sm": ["Montserrat"],
+                            "body-sm": ["Inter"],
+                            "body-md": ["Inter"],
+                            "headline-md": ["Montserrat"],
+                            "label-caps": ["Inter"]
+                        },
+                        "fontSize": {
+                            "nav-link": ["15px", {"lineHeight": "24px", "fontWeight": "500"}],
+                            "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                        }
+                    },
+                },
+            }
+        } catch (_e) {}
+    </script>
+</head>
+<body class="bg-surface text-charcoal-text font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-hospital-white border-b border-[#EEEEEE] transition-all duration-300 h-24">
+    <div class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center gap-4">
+        <!-- Brand -->
+        <a class="mr-4 flex items-center" href="index.html">
+            <img src="ibn-i-sina-hastanesi.jpg" alt="İbni Sina Hastanesi Logo" class="h-16 w-auto object-contain">
+        </a>
+        <!-- Tabbed Navigation Links -->
+        <div class="hidden lg:flex items-center h-full">
+            <a class="font-nav-link text-[13px] tracking-tight text-deep-madder font-bold border-b-2 border-deep-madder px-3 h-full flex items-center" href="index.html">Anasayfa</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="sayfalar/tıbbibirimler.html">Tıbbi Birimler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="sayfalar/hekimlerimiz.html">Hekimlerimiz</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="sayfalar/onlineislemler.html">Online İşlemler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="sayfalar/iletisim.html">İletişim</a>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center gap-stack-md">
+            <div class="flex items-center gap-2 border-r border-slate-gray/20 pr-4">
+                <span class="text-[11px] font-bold text-deep-madder cursor-pointer">TR</span>
+                <span class="text-[11px] text-slate-gray">|</span>
+                <span class="text-[11px] font-bold text-slate-gray hover:text-deep-madder cursor-pointer transition-colors">EN</span>
+            </div>
+            <a class="flex items-center gap-1.5 text-deep-madder font-bold text-[13px] ml-2" href="tel:08500000000">
+                <span class="material-symbols-outlined text-base">call</span>
+                <span class="">0850 000 00 00</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative pt-20 h-[80vh] min-h-[600px] flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img alt="A high-resolution wide-angle view of a modern hospital interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYq3VGXeEoB9H9DtHQqWRA2JIocJIfvWggP9SMFUQhXt1VelOwAVXQ0QtrkKmKPrXMFjLGei4y16ax26dvXSRDIbQAQ_HPDV3cTmg9ZZB0i0WIfz4ibulK5B7166W4HS2lP91Mojc_t5qkEe91YJaTWjrX0B88V2GvTWYNyxCDHKFV3R32BSHIrGVj1Co9ehhtmxOz2UTQfyD-Fm4IUTO74GE8rlfnrgzxp2aAVKQcZ4NmWpdVSX_9">
+        <div class="absolute inset-0 bg-gradient-to-r from-hospital-white via-hospital-white/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+        <div class="max-w-2xl">
+            <span class="font-label-caps text-label-caps text-action-teal mb-stack-sm block tracking-[0.2em] uppercase">Güvenli Gelecek İçin</span>
+            <h1 class="font-headline-lg text-headline-lg text-charcoal-text mb-stack-md leading-tight">
+                "Bizim İçin <span class="text-deep-madder italic">Önemlisiniz</span>"
+            </h1>
+            <p class="font-body-lg text-body-lg text-slate-gray mb-stack-lg max-w-lg">
+                Modern tıp teknolojileri ve uzman hekim kadromuzla, sağlığınızı en üst düzeyde korumak için buradayız. Hastanemiz, hasta odaklı yaklaşımıyla şifa dağıtmaya devam ediyor.
+            </p>
+            <div class="flex flex-wrap gap-stack-md">
+                <a href="sayfalar/kurumsal.html" class="bg-deep-madder text-on-primary px-8 py-4 rounded-lg font-bold hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                    <span class="material-symbols-outlined">info</span>
+                    Hakkımızda Daha Fazla
+                </a>
+                <a href="sayfalar/tıbbibirimler.html" class="border-2 border-charcoal-text text-charcoal-text px-8 py-4 rounded-lg font-bold hover:bg-charcoal-text hover:text-hospital-white transition-all flex items-center gap-2">
+                    Hizmetlerimiz
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Float Stats -->
+    <div class="absolute bottom-24 right-margin-desktop hidden xl:flex flex-col gap-stack-md z-10">
+        <div class="bg-hospital-white/80 backdrop-blur-md p-6 rounded-xl shadow-xl w-48 border border-white/20">
+            <div class="text-deep-madder font-bold text-headline-sm mb-1">50+</div>
+            <div class="text-slate-gray font-body-sm">Uzman Branş</div>
+        </div>
+        <div class="bg-hospital-white/80 backdrop-blur-md p-6 rounded-xl shadow-xl w-48 border border-white/20">
+            <div class="text-action-teal font-bold text-headline-sm mb-1">24/7</div>
+            <div class="text-slate-gray font-body-sm">Acil Servis</div>
+        </div>
+    </div>
+</section>
+
+<!-- Redesigned Quick Access Section -->
+<section class="bg-hospital-white border-y border-[#EEEEEE] relative z-20">
+    <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="grid grid-cols-2 md:grid-cols-5 divide-x divide-[#EEEEEE] border-x border-[#EEEEEE]">
+            <a class="flex flex-col items-center justify-center py-10 px-4 group hover:bg-surface-container-low transition-colors" href="sayfalar/kurumsal.html">
+                <span class="material-symbols-outlined text-4xl text-action-teal mb-4 group-hover:scale-110 transition-transform">corporate_fare</span>
+                <span class="text-sm font-bold text-charcoal-text text-center uppercase tracking-wider">Kurumsal</span>
+            </a>
+            <a class="flex flex-col items-center justify-center py-10 px-4 group hover:bg-surface-container-low transition-colors border-l md:border-l-0" href="sayfalar/onlineislemler.html">
+                <span class="material-symbols-outlined text-4xl text-action-teal mb-4 group-hover:scale-110 transition-transform">biotech</span>
+                <span class="text-sm font-bold text-charcoal-text text-center uppercase tracking-wider">Laboratuar Sonuçları</span>
+            </a>
+            <a class="flex flex-col items-center justify-center py-10 px-4 group hover:bg-surface-container-low transition-colors" href="sayfalar/onlineislemler.html">
+                <span class="material-symbols-outlined text-4xl text-action-teal mb-4 group-hover:scale-110 transition-transform">devices</span>
+                <span class="text-sm font-bold text-charcoal-text text-center uppercase tracking-wider">Online İşlemler</span>
+            </a>
+            <a class="flex flex-col items-center justify-center py-10 px-4 group hover:bg-surface-container-low transition-colors border-l md:border-l-0" href="sayfalar/onlineislemler.html">
+                <span class="material-symbols-outlined text-4xl text-action-teal mb-4 group-hover:scale-110 transition-transform">radiology</span>
+                <span class="text-sm font-bold text-charcoal-text text-center uppercase tracking-wider">Radyolojik Görüntüleme</span>
+            </a>
+            <a class="flex flex-col items-center justify-center py-10 px-4 group hover:bg-surface-container-low transition-colors col-span-2 md:col-span-1 border-t md:border-t-0" href="sayfalar/isbasvurusu.html">
+                <span class="material-symbols-outlined text-4xl text-action-teal mb-4 group-hover:scale-110 transition-transform">work</span>
+                <span class="text-sm font-bold text-charcoal-text text-center uppercase tracking-wider">İş Başvurusu</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Unit Highlight Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+    <div class="text-center mb-16">
+        <h2 class="font-headline-md text-headline-md text-charcoal-text mb-4">Öne Çıkan Birimlerimiz</h2>
+        <p class="text-slate-gray max-w-2xl mx-auto">En son teknolojiler ve uzman kadromuzla yanınızdayız. Modern tanı ve tedavi yöntemlerini dünya standartlarında sunuyoruz.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        <!-- Main Card: Laboratuvar -->
+        <div class="md:col-span-8 group relative overflow-hidden rounded-2xl border border-[#EEEEEE] bg-hospital-white hover:shadow-2xl transition-all duration-500 h-[450px]">
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-text/90 via-charcoal-text/40 to-transparent z-10"></div>
+            <img alt="Gelişmiş Tanı Merkezi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYq3VGXeEoB9H9DtHQqWRA2JIocJIfvWggP9SMFUQhXt1VelOwAVXQ0QtrkKmKPrXMFjLGei4y16ax26dvXSRDIbQAQ_HPDV3cTmg9ZZB0i0WIfz4ibulK5B7166W4HS2lP91Mojc_t5qkEe91YJaTWjrX0B88V2GvTWYNyxCDHKFV3R32BSHIrGVj1Co9ehhtmxOz2UTQfyD-Fm4IUTO74GE8rlfnrgzxp2aAVKQcZ4NmWpdVSX_9">
+            <div class="absolute bottom-0 left-0 p-8 z-20 text-hospital-white">
+                <span class="font-label-caps text-label-caps bg-deep-madder px-3 py-1 rounded mb-4 inline-block">LABORATUVAR</span>
+                <h3 class="font-headline-sm text-headline-sm mb-2">Gelişmiş Tanı Merkezi</h3>
+                <p class="font-body-md text-body-md opacity-90 mb-6 max-w-md">24 saat kesintisiz hizmet veren laboratuvarımızda en doğru sonuçlar için çalışıyoruz.</p>
+                <a href="sayfalar/tıbbibirimler.html" class="flex items-center gap-2 font-bold hover:gap-4 transition-all">Detaylı Bilgi <span class="material-symbols-outlined">arrow_forward</span></a>
+            </div>
+        </div>
+        <!-- Side Card: Radyoloji -->
+        <div class="md:col-span-4 group relative overflow-hidden rounded-2xl border border-[#EEEEEE] bg-hospital-white hover:shadow-2xl transition-all duration-500 h-[450px]">
+            <div class="p-8 h-full flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-surface-muted rounded-xl flex items-center justify-center text-action-teal mb-6 group-hover:bg-action-teal group-hover:text-hospital-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">radiology</span>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm mb-4">Radyoloji</h3>
+                    <p class="text-slate-gray font-body-sm leading-relaxed">MR, BT and Ultrasonografi hizmetlerimizle dijital görüntüleme çözümleri sunuyoruz.</p>
+                </div>
+                <a class="text-action-teal font-bold flex items-center gap-2 mt-8" href="sayfalar/tıbbibirimler.html">Birim Sayfası <span class="material-symbols-outlined">chevron_right</span></a>
+            </div>
+        </div>
+        
+        <!-- Redesigned Row: Acil Servis & Nöbetçi Eczaneler & E-Bülten / Rehber -->
+        <!-- Acil Servis (Wide span for visual weight) -->
+        <div class="md:col-span-4 group relative overflow-hidden rounded-2xl border border-[#EEEEEE] bg-deep-madder text-hospital-white hover:shadow-2xl transition-all duration-500 min-h-[350px]">
+            <div class="p-8 h-full flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-hospital-white mb-6">
+                        <span class="material-symbols-outlined text-3xl">emergency</span>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm mb-4">Acil Servis</h3>
+                    <p class="font-body-sm leading-relaxed opacity-90">Tam donanımlı acil servisimizle 7 gün 24 saat kesintisiz sağlık hizmeti sunuyoruz.</p>
+                </div>
+                <a href="sayfalar/iletisim.html" class="bg-hospital-white text-deep-madder py-3 rounded-lg font-bold mt-8 hover:bg-opacity-90 transition-all text-center">İletişime Geç</a>
+            </div>
+        </div>
+
+        <!-- Balanced Row: Nöbetçi Eczaneler + E-Bülten -->
+        <div class="md:col-span-4 group relative overflow-hidden rounded-2xl border border-[#EEEEEE] bg-hospital-white hover:shadow-2xl transition-all duration-500 min-h-[350px]">
+            <div class="p-8 h-full flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-action-teal/5 rounded-xl flex items-center justify-center text-action-teal mb-6 group-hover:bg-action-teal group-hover:text-hospital-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">local_pharmacy</span>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm mb-4">Nöbetçi Eczaneler</h3>
+                    <p class="text-slate-gray font-body-sm leading-relaxed">Bölgemizdeki güncel nöbetçi eczane listesine buradan ulaşabilirsiniz.</p>
+                </div>
+                <a href="sayfalar/nobetcieczane.html" class="border-2 border-action-teal text-action-teal py-3 rounded-lg font-bold mt-8 hover:bg-action-teal hover:text-hospital-white transition-all text-center">Listeyi Gör</a>
+            </div>
+        </div>
+
+        <div class="md:col-span-4 group relative overflow-hidden rounded-2xl border border-[#EEEEEE] bg-hospital-white hover:shadow-2xl transition-all duration-500 min-h-[350px]">
+            <div class="p-8 h-full flex flex-col justify-between"><div><div class="w-14 h-14 bg-deep-madder/5 rounded-xl flex items-center justify-center text-deep-madder mb-6 group-hover:bg-deep-madder group-hover:text-hospital-white transition-colors"><span class="material-symbols-outlined text-3xl">newspaper</span></div><h3 class="font-headline-sm text-headline-sm mb-4">E-Bülten</h3><p class="text-slate-gray font-body-sm leading-relaxed">Hastanemizden güncel sağlık haberleri ve makalelere göz atın.</p></div><a href="sayfalar/ebulten.html" class="w-full bg-deep-madder text-on-primary py-4 rounded-lg font-bold mt-8 hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">Bültenleri İncele <span class="material-symbols-outlined">arrow_forward</span></a></div>
+        </div>
+
+        <!-- Full Width Guide Row -->
+        <div class="md:col-span-12 group relative overflow-hidden rounded-2xl border border-[#EEEEEE] bg-hospital-white hover:shadow-2xl transition-all duration-500 min-h-[300px]">
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                <div class="p-10 flex flex-col justify-center">
+                    <span class="font-label-caps text-label-caps text-action-teal mb-2 block">REHBER</span>
+                    <h3 class="font-headline-sm text-headline-sm mb-4">Ziyaretçi ve Hasta Rehberi</h3>
+                    <p class="text-slate-gray font-body-md mb-8">Hastanemize yapacağınız ziyaretler ve yatış süreçleri hakkında merak ettiğiniz tüm bilgiler burada.</p>
+                    <a href="sayfalar/ziyaretcivehastarehberi.html" class="flex items-center gap-2 font-bold text-deep-madder hover:gap-4 transition-all w-fit">Rehberi İncele <span class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+                <div class="relative overflow-hidden h-64 md:h-auto">
+                    <img alt="Ziyaretçi ve Hasta Rehberi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuYkThG9IjWf_PRKkSRiqUI7O291OOnB3MS_985C3IH3Ei5yQ57MyqBeaxtjnGrCk8zAmZ1GPAez5uk1-53N7rZLZr3irqCk5ifWfESykJgj8iMprc4dqGgVADXfrCco-8q0pwmC3bSzToehCi8ZVq5gNY4Ey2dtXQpXcc0ySirkRrlOoYQ2e4HV9RTDXuIN3191mqulsVVlu_XdxpA4n79ShvNUGJcqhg80TYzRjxoSISxPInFwytMT1Y">
+                    <div class="absolute inset-0 bg-action-teal/5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Doctors -->
+<section class="bg-surface-muted py-section-gap">
+    <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-stack-md">
+            <div class="max-w-xl">
+                <h2 class="font-headline-md text-headline-md text-charcoal-text mb-4">Uzman Hekimlerimiz</h2>
+                <p class="text-slate-gray">Alanında uzman, deneyimli kadromuzla her zaman en iyi sağlık hizmetini sunmak için çalışıyoruz.</p>
+            </div>
+            <a href="sayfalar/hekimlerimiz.html" class="text-deep-madder font-bold flex items-center gap-2 border-b-2 border-deep-madder pb-1 hover:gap-4 transition-all">Tüm Doktorları Gör <span class="material-symbols-outlined">east</span></a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+            <!-- Doctor Card 1 -->
+            <div class="group">
+                <div class="relative aspect-[3/4] overflow-hidden rounded-2xl mb-6 shadow-sm border border-[#EEEEEE] bg-hospital-white">
+                    <img alt="Prof. Dr. Ahmet Yılmaz" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdc6_6XaKF5Gtv9j2CVrZolmMNKCMbpbbPKqhzQVoKGUy_vUlX7bolxqEMPS1u4w3T3ZgNDjgyhg3YvoxLD2rc7Qv7vdjUwrfRx9AbzXT8yJ8NgC3Lfk8IDYCDV0WXXAKx_LFSxFm3sx8p4fD92RqBCcYpgUN48uNg8CSZwoZiYihsgI-5k_l80b5sg8Z3lWqk6wSZhcvPKHg95IBJ_TiTlLlKM96LBdbDLlWgRNVBBCzHcYk3i6pn">
+                    <div class="absolute inset-0 bg-deep-madder/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+                <div class="text-center">
+                    <h4 class="font-headline-sm text-[20px] mb-1">Prof. Dr. Ahmet Yılmaz</h4>
+                    <p class="text-action-teal font-label-caps mb-4 tracking-wider uppercase">KARDİYOLOJİ UZMANI</p>
+                    <a href="sayfalar/hekimprofil.html" class="w-full py-3 border border-slate-gray/20 rounded-lg text-slate-gray font-bold hover:bg-deep-madder hover:text-on-primary hover:border-deep-madder transition-all shadow-sm text-center block">Profil Görüntüle</a>
+                </div>
+            </div>
+            <!-- Doctor Card 2 -->
+            <div class="group">
+                <div class="relative aspect-[3/4] overflow-hidden rounded-2xl mb-6 shadow-sm border border-[#EEEEEE] bg-hospital-white">
+                    <img alt="Doç. Dr. Ayşe Kaya" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpRya8_gR1INeKh8mWD90SQWFuDB-tfhrXZemwmmFgGkdna_sKWGA7PHjii_2XLGf68743_AFxb9luaDknySSvZrByPAjG0kVtpMfyhxGxhCgHiysd4zToevT5SYhqHWgIPHjXHzFBwnkp52ChSEdO_sJKmfP-PQLM4vMvPJzP_vuXtdUloJLBt3PCtqEiuEnbCsc8aLano5Eh1ubwSC6QNraamTgEq4H_OsEQrckuHOaX5BIH0g4o">
+                    <div class="absolute inset-0 bg-deep-madder/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+                <div class="text-center">
+                    <h4 class="font-headline-sm text-[20px] mb-1">Doç. Dr. Ayşe Kaya</h4>
+                    <p class="text-action-teal font-label-caps mb-4 tracking-wider uppercase">GÖZ HASTALIKLARI</p>
+                    <a href="sayfalar/hekimprofil.html" class="w-full py-3 border border-slate-gray/20 rounded-lg text-slate-gray font-bold hover:bg-deep-madder hover:text-on-primary hover:border-deep-madder transition-all shadow-sm text-center block">Profil Görüntüle</a>
+                </div>
+            </div>
+            <!-- Doctor Card 3 -->
+            <div class="group">
+                <div class="relative aspect-[3/4] overflow-hidden rounded-2xl mb-6 shadow-sm border border-[#EEEEEE] bg-hospital-white">
+                    <img alt="Op. Dr. Mehmet Demir" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyi6n-CGUS8iKkkn2w7cjTbnGQjRrIFQfytAD4kl0Dqnon1JryEGIsYh1gUz4HABi9pRr7vOu88JmqecvOB4J1A37pBq7Ir6UA9_dgmLiWP5J6MYU5agRk5-qJqFWKyYUId1mf7dDWI_kkG5cmLc3v72Z56OyZrBdrNJOqljs5xCL5AHLsYYK2F8FbcFRWlUx1pcSt9CvMhxqBgRuaphH-qZb4rkGVpBiImTb1ZLy8wK50SVrm1CJG">
+                    <div class="absolute inset-0 bg-deep-madder/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+                <div class="text-center">
+                    <h4 class="font-headline-sm text-[20px] mb-1">Op. Dr. Mehmet Demir</h4>
+                    <p class="text-action-teal font-label-caps mb-4 tracking-wider uppercase">GENEL CERRAHİ</p>
+                    <a href="sayfalar/hekimprofil.html" class="w-full py-3 border border-slate-gray/20 rounded-lg text-slate-gray font-bold hover:bg-deep-madder hover:text-on-primary hover:border-deep-madder transition-all shadow-sm text-center block">Profil Görüntüle</a>
+                </div>
+            </div>
+            <!-- Doctor Card 4 -->
+            <div class="group">
+                <div class="relative aspect-[3/4] overflow-hidden rounded-2xl mb-6 shadow-sm border border-[#EEEEEE] bg-hospital-white">
+                    <img alt="Uzm. Dr. Elif Şahin" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeOa3w1X9GYnf59y-LBYXsxXX8-oMvQ9mLVjzHLJcVo-jBmhSLv51ZK8E-oZJ5iUh4SPEeMNVchW8TLiCscGyan5JlTQPvKnJaeuYV79yyel9uQ58_wCZVP4geC0EYlV_Mx0xvS9CyZ5Eapo37OYQ0byByiBHEHnuuB8VNiKh4PPFYtM9phVrIjzqAlJLREoJIqfmAIjbf7yMSEZM0VJa-Zgo_32o-ST3JcSMbrSU82in_8RDBvrQE">
+                    <div class="absolute inset-0 bg-deep-madder/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+                <div class="text-center">
+                    <h4 class="font-headline-sm text-[20px] mb-1">Uzm. Dr. Elif Şahin</h4>
+                    <p class="text-action-teal font-label-caps mb-4 tracking-wider uppercase">ÇOCUK SAĞLIĞI VE HAST.</p>
+                    <a href="sayfalar/hekimprofil.html" class="w-full py-3 border border-slate-gray/20 rounded-lg text-slate-gray font-bold hover:bg-deep-madder hover:text-on-primary hover:border-deep-madder transition-all shadow-sm text-center block">Profil Görüntüle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-desktop">
+    <div class="bg-charcoal-text rounded-3xl p-12 relative overflow-hidden flex flex-col items-center text-center">
+        <div class="relative z-10 max-w-2xl">
+            <h2 class="font-headline-lg text-headline-lg text-hospital-white mb-6">Sağlığınız İçin Modern Çözümler</h2>
+            <p class="text-hospital-white/70 font-body-lg mb-10">Sorularınız için bize ulaşabilir veya bilgi almak için bir mesaj gönderebilirsiniz. Yanınızdayız.</p>
+            <div class="flex flex-col sm:flex-row gap-stack-lg justify-center">
+                <a class="bg-action-teal text-on-primary px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:scale-105 transition-all shadow-lg" href="tel:08500000000">
+                    <span class="material-symbols-outlined">call</span>
+                    0850 000 00 00
+                </a>
+                <a href="sayfalar/iletisim.html" class="bg-hospital-white text-charcoal-text px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:scale-105 transition-all shadow-lg">
+                    <span class="material-symbols-outlined">mail</span>
+                    Bize Mesaj Gönderin
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-hospital-white border-t border-[#EEEEEE]">
+    <div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+        <div class="md:col-span-1">
+            <div class="font-headline-sm text-headline-sm font-bold text-deep-madder mb-6">İbni Sina Hastanesi</div>
+            <p class="text-slate-gray font-body-sm leading-relaxed mb-8">Modern tıbbın tüm imkanlarını insan odaklı yaklaşımla birleştirerek, güvenilir sağlık hizmeti sunuyoruz.</p>
+            <div class="flex gap-4">
+                <a class="w-10 h-10 rounded-full border border-[#EEEEEE] flex items-center justify-center text-slate-gray hover:bg-deep-madder hover:text-on-primary transition-all" href="#">
+                    <span class="material-symbols-outlined text-sm">public</span>
+                </a>
+                <a class="w-10 h-10 rounded-full border border-[#EEEEEE] flex items-center justify-center text-slate-gray hover:bg-deep-madder hover:text-on-primary transition-all" href="#">
+                    <span class="material-symbols-outlined text-sm">alternate_email</span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <h5 class="font-bold text-deep-madder mb-6">Kurumsal</h5>
+            <ul class="flex flex-col gap-3">
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="sayfalar/kurumsal.html">Hakkımızda</a></li>
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="sayfalar/kurumsal.html">Kalite Politikamız</a></li>
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="sayfalar/isbasvurusu.html">İş Başvurusu</a></li>
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="sayfalar/onlineislemler.html">Laboratuar Sonuçları</a></li>
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="sayfalar/onlineislemler.html">Radyolojik Görüntüleme</a></li>
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="sayfalar/kurumsal.html">Vizyon &amp; Misyon</a></li>
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="sayfalar/kurumsal.html">Yönetim</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="font-bold text-deep-madder mb-6">Hızlı Bağlantılar</h5>
+            <ul class="flex flex-col gap-3">
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="sayfalar/iletisim.html">İletişim</a></li>
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="#">KVK Aydınlatma Metni</a></li>
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="#">Çerez Politikası</a></li>
+                <li class=""><a class="text-slate-gray hover:text-action-teal font-body-sm transition-colors" href="#">Sıkça Sorulan Sorular</a></li>
+            </ul>
+        </div>
+        <div class="">
+            <h5 class="font-bold text-deep-madder mb-6">İletişim Bilgileri</h5>
+            <div class="flex flex-col gap-4">
+                <div class="flex gap-3">
+                    <span class="material-symbols-outlined text-action-teal">location_on</span>
+                    <p class="text-slate-gray font-body-sm">Merkez Mah. Sağlık Sok. No:12, Osmaniye</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="material-symbols-outlined text-action-teal">phone_in_
+
+</span></div></div></div></div></footer></body></html>

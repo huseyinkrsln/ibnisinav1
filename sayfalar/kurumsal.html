@@ -1,0 +1,328 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="tr" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface": "#f7faf8",
+                    "on-primary-container": "#ffbbb1",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#b1ecff",
+                    "background": "#f7faf8",
+                    "secondary-fixed": "#dfe3e7",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f1f4f2",
+                    "on-surface": "#181c1b",
+                    "slate-gray": "#4E5255",
+                    "primary-container": "#a81e13",
+                    "secondary-fixed-dim": "#c3c7cb",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#181c1b",
+                    "inverse-surface": "#2d3130",
+                    "surface-dim": "#d7dbd9",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "tertiary-fixed-dim": "#61d5f5",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#b4271b",
+                    "on-tertiary-container": "#68dbfb",
+                    "hospital-white": "#FFFFFF",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e0e3e1",
+                    "tertiary": "#004654",
+                    "surface-container-highest": "#e0e3e1",
+                    "on-surface-variant": "#5a413c",
+                    "secondary": "#5a5f62",
+                    "primary-fixed": "#ffdad4",
+                    "on-primary-fixed": "#410000",
+                    "surface-bright": "#f7faf8",
+                    "on-secondary-fixed-variant": "#42474b",
+                    "outline-variant": "#e2beb9",
+                    "inverse-primary": "#ffb4a8",
+                    "tertiary-container": "#005f72",
+                    "surface-muted": "#F8FAFB",
+                    "on-secondary-container": "#5e6367",
+                    "surface-container": "#ebefed",
+                    "outline": "#8e706b",
+                    "action-teal": "#009DBB",
+                    "primary": "#840000",
+                    "on-tertiary-fixed": "#001f27",
+                    "inverse-on-surface": "#eef1ef",
+                    "surface-container-high": "#e6e9e7",
+                    "charcoal-text": "#22272A",
+                    "secondary-container": "#dce0e4",
+                    "on-primary-fixed-variant": "#910904",
+                    "deep-madder": "#A81E13",
+                    "on-tertiary-fixed-variant": "#004e5e",
+                    "on-secondary-fixed": "#171c1f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "stack-lg": "24px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "nav-link": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "nav-link": ["15px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-surface text-charcoal-text font-body-md selection:bg-deep-madder selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-hospital-white border-b border-[#EEEEEE] transition-all duration-300 h-24">
+    <div class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center gap-4">
+        <!-- Brand -->
+        <a class="mr-4 flex items-center" href="../index.html">
+            <img src="../ibn-i-sina-hastanesi.jpg" alt="İbni Sina Hastanesi Logo" class="h-16 w-auto object-contain">
+        </a>
+        <!-- Tabbed Navigation Links -->
+        <div class="hidden lg:flex items-center h-full">
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="../index.html">Anasayfa</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="onlineislemler.html">Online İşlemler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="iletisim.html">İletişim</a>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center gap-stack-md">
+            <div class="flex items-center gap-2 border-r border-slate-gray/20 pr-4">
+                <span class="text-[11px] font-bold text-deep-madder cursor-pointer">TR</span>
+                <span class="text-[11px] text-slate-gray">|</span>
+                <span class="text-[11px] font-bold text-slate-gray hover:text-deep-madder cursor-pointer transition-colors">EN</span>
+            </div>
+            <a class="flex items-center gap-1.5 text-deep-madder font-bold text-[13px] ml-2" href="tel:08500000000">
+                <span class="material-symbols-outlined text-base">call</span>
+                <span class="">0850 000 00 00</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<header class="relative h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-75 z-0" src="https://lh3.googleusercontent.com/aida/AP1WRLsySLe6Abu7JmvA7Kwy8iZvoRFdBQl4bNITKT5WT-jKcip1k-lSv0U25_LO6hfeGmaO0ghJNhIRRB0kLbzJmFtNeT4epAB7nPQpQZ8rN3T7C2Ivl4uQ6UTAr9keyGj4Yf6EEE5x4WXLdsQfvSZMevDMe33ia_QNQWCl1dQKwJ034VdJ-JX5ULB6yBH14D3U0wjMF6I-ssCi6Xln33ToWQ3CugjByDv0ExNBP5isDj6IAZWAnQYeB0sMsVw">
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent z-10"></div></div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl space-y-stack-sm">
+  <div class="w-12 h-1 bg-deep-madder mb-6"></div>
+  <span class="font-label-caps text-label-caps text-hospital-white/80 tracking-[0.2em] block">HAKKIMIZDA</span>
+  <h1 class="font-headline-lg text-headline-lg text-hospital-white mb-4">Kurumsal</h1>
+  <p class="font-body-lg text-body-lg text-hospital-white/90 leading-relaxed border-l-2 border-deep-madder/50 pl-6">Sağlığınız İçin Modern Tıbbın Gücüyle 25 Yıldır Yanınızdayız.</p>
+</div>
+</div>
+</header>
+<!-- Hakkımızda (About Us) Section -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="space-y-stack-lg">
+<span class="font-label-caps text-label-caps text-action-teal tracking-[0.2em]">BİZ KİMİZ?</span>
+<h2 class="font-headline-md text-headline-md text-charcoal-text">Şifa Dağıtan Bir Mirasın Modern Temsilcisi</h2>
+<div class="space-y-stack-md text-slate-gray font-body-md">
+<p class="">Özel İbni Sina Hastanesi, kurulduğu günden bu yana "Önce İnsan" prensibiyle hareket ederek, tıbbi etik ilkelerinden ödün vermeden hasta memnuniyetini en üst düzeyde tutmayı hedeflemiştir. İsmini tıp tarihinin en büyük dehalarından olan İbni Sina'dan alan hastanemiz, onun bilimsel titizliğini günümüzün son teknolojik imkanlarıyla birleştirmektedir.</p>
+<p class="">Geniş uzman kadromuz ve donanımlı tıbbi birimlerimizle, sadece bölgesel değil, ulusal çapta bir referans merkezi olma yolunda emin adımlarla ilerliyoruz. Her bir hastamızı ailemizin bir ferdi olarak görüyor, tanı ve tedavi süreçlerinde en hassas yaklaşımları sergiliyoruz.</p>
+</div>
+<button class="flex items-center gap-2 font-nav-link text-nav-link text-deep-madder font-bold group">
+                        Tarihçemizi İnceleyin 
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-2xl h-[500px]">
+<img class="w-full h-full object-cover" data-alt="A high-end cinematic photograph of a modern hospital lobby at İbni Sina Hastanesi. The architecture is sleek with polished marble floors, floor-to-ceiling glass windows allowing soft natural daylight to fill the space. Patients and medical staff interact in a serene, professional environment. The lighting is bright and clean, emphasizing a corporate light-mode aesthetic with subtle red and teal accents in the branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoehExqDNaZUk1i5Qp-OB-zmXsJ1XWdpVi6lnM1Xk7oJIdBexXDoZRJB4H1SVEtaRbx626xUmf-dVZmzQHdx8_ALBJ6SBFu1FoRSZgkoA3_RiOi42pSAVM7U2y1SPdF_VFmDykrrrdDf05hk4UfzUPVcA2O6Jkwxq8DJ3n4cOJoSUCh7YOvOxm5tsrpl_OBVjJkH586G1RicfGjdjggJIznN-P5579oNYCiwjWn2apaVKp0fsT3A1c">
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-charcoal-text/80 to-transparent p-8">
+<p class="text-hospital-white font-headline-sm">25+ Yıllık Tecrübe</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Misyon & Vizyon Section (Bento Grid) -->
+<section class="py-section-gap bg-surface-muted">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16 space-y-stack-sm">
+<span class="font-label-caps text-label-caps text-deep-madder">GELECEK PROJEKSİYONUMUZ</span>
+<h2 class="font-headline-md text-headline-md">Misyonumuz ve Vizyonumuz</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-full md:h-[450px]">
+<!-- Mission -->
+<div class="md:col-span-7 bg-hospital-white p-12 border border-[#EEEEEE] flex flex-col justify-center bento-card rounded-xl">
+<div class="w-16 h-16 bg-deep-madder/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-deep-madder text-3xl">flag</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4">Misyonumuz</h3>
+<p class="font-body-lg text-body-lg text-slate-gray leading-relaxed">
+                            Bireylerin yaşam kalitesini artırmak için tıp bilimindeki güncel gelişmeleri takip ederek, yüksek standartlı sağlık hizmetlerini toplumun her kesimine etik, güvenilir ve sürdürülebilir bir modelle sunmaktır.
+                        </p>
+</div>
+<!-- Vision -->
+<div class="md:col-span-5 bg-deep-madder p-12 text-hospital-white flex flex-col justify-center bento-card rounded-xl">
+<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-hospital-white text-3xl">visibility</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4">Vizyonumuz</h3>
+<p class="font-body-md text-body-md opacity-90 leading-relaxed">
+                            Teknolojik altyapısı ve uzman akademik kadrosuyla uluslararası platformda tanınan, sağlık turizminde öncü ve Türkiye'nin en güvenilen sağlık kurumu olma vizyonunu taşıyoruz.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Kalite Politikamız -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-charcoal-text rounded-3xl p-12 md:p-20 text-hospital-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px]" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+</div>
+<div class="relative z-10 max-w-2xl">
+<span class="font-label-caps text-label-caps text-action-teal mb-4 block">STANDARTLARIMIZ</span>
+<h2 class="font-headline-md text-headline-md mb-6">Kalite Politikamız</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-10">
+                        Hastanemiz, ulusal ve uluslararası kalite standartlarını (SKS, ISO) temel alarak, hata payını minimize eden, sürekli iyileşmeyi hedefleyen ve hasta güvenliğini tüm süreçlerin merkezine koyan bir yönetim anlayışını benimser.
+                    </p>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-action-teal">check_circle</span>
+<span class="">Sürekli Eğitilen Profesyonel Kadro</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-action-teal">check_circle</span>
+<span class="">Sıfır Atık ve Çevre Dostu Yaklaşım</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-action-teal">check_circle</span>
+<span class="">Hasta Hakları ve Mahremiyeti</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-action-teal">check_circle</span>
+<span class="">Klinik Yönetişim ve Veriye Dayalı Kararlar</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Değerlerimiz Section -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md">Bizi Biz Yapan Değerlerimiz</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="text-center p-8 bento-card border border-[#EEEEEE] rounded-xl bg-hospital-white">
+<div class="w-20 h-20 mx-auto bg-surface-muted rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-deep-madder text-4xl" style="font-variation-settings: &quot;FILL&quot; 1;">groups</span>
+</div>
+<h4 class="font-headline-sm text-[20px] mb-2">İnsan Odaklılık</h4>
+<p class="font-body-sm text-slate-gray">Her adımda hastalarımızın ve çalışanlarımızın sağlığını önceliyoruz.</p>
+</div>
+<div class="text-center p-8 bento-card border border-[#EEEEEE] rounded-xl bg-hospital-white">
+<div class="w-20 h-20 mx-auto bg-surface-muted rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-deep-madder text-4xl" style="font-variation-settings: &quot;FILL&quot; 1;">biotech</span>
+</div>
+<h4 class="font-headline-sm text-[20px] mb-2">Hassasiyet</h4>
+<p class="font-body-sm text-slate-gray">Teşhis ve tedavide klinik mükemmellik için milimetrik hassasiyet.</p>
+</div>
+<div class="text-center p-8 bento-card border border-[#EEEEEE] rounded-xl bg-hospital-white">
+<div class="w-20 h-20 mx-auto bg-surface-muted rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-deep-madder text-4xl" style="font-variation-settings: &quot;FILL&quot; 1;">insights</span>
+</div>
+<h4 class="font-headline-sm text-[20px] mb-2">İnovasyon</h4>
+<p class="font-body-sm text-slate-gray">Sağlıkta en son teknolojileri sistemimize entegre ediyoruz.</p>
+</div>
+<div class="text-center p-8 bento-card border border-[#EEEEEE] rounded-xl bg-hospital-white">
+<div class="w-20 h-20 mx-auto bg-surface-muted rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-deep-madder text-4xl" style="font-variation-settings: &quot;FILL&quot; 1;">gavel</span>
+</div>
+<h4 class="font-headline-sm text-[20px] mb-2">Güven</h4>
+<p class="font-body-sm text-slate-gray">Şeffaf iletişim ve dürüstlükle hastalarımızın güvenini kazanıyoruz.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component JSON Mapping) -->
+<footer class="bg-surface border-t border-[#EEEEEE] w-full">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="space-y-stack-md">
+<a class="font-headline-sm text-headline-sm font-bold text-deep-madder" href="../index.html">İbni Sina Hastanesi</a>
+<p class="font-body-sm text-body-sm text-slate-gray">Modern tıbbın ve şefkatin buluştuğu adres.</p>
+<div class="flex gap-4">
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined" data-original-icon="location">location_on</span></a>
+</div>
+</div>
+<div class="space-y-stack-md">
+<h5 class="font-label-caps text-label-caps text-deep-madder">Hızlı Erişim</h5>
+<ul class="space-y-stack-sm font-body-sm text-slate-gray">
+<li class=""><a class="hover:text-action-teal transition-colors" href="../index.html">Anasayfa</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="kurumsal.html">Kurumsal</a></li>
+</ul>
+</div>
+<div class="space-y-stack-md">
+<h5 class="font-label-caps text-label-caps text-deep-madder">Yasal</h5>
+<ul class="space-y-stack-sm font-body-sm text-slate-gray">
+<li class=""><a class="hover:text-action-teal transition-colors" href="iletisim.html">İletişim</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="#">KVK Aydınlatma Metni</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="#">Çerez Politikası</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="#">Sıkça Sorulan Sorular</a></li>
+</ul>
+</div>
+<div class="space-y-stack-md">
+<h5 class="font-label-caps text-label-caps text-deep-madder">İletişim</h5>
+<p class="font-body-sm text-slate-gray leading-relaxed">
+                    0212 444 0 444<br>
+                    bilgi@ibnisinahastanesi.com<br>
+                    Cumhuriyet Cad. No:123<br>
+                    İstanbul, Türkiye
+                </p>
+</div>
+</div>
+<div class="border-t border-[#EEEEEE] py-6 text-center">
+<p class="font-body-sm text-body-sm text-slate-gray opacity-70">© 2024 İbni Sina Hastanesi. Tüm Hakları Saklıdır.</p>
+</div>
+</footer>
+<script class="">
+        // Header scroll behavior
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+
+
+</body></html>

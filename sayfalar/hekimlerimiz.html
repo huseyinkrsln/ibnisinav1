@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hekimlerimiz | İbni Sina Hastanesi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f7faf8",
+                        "on-secondary-fixed-variant": "#42474b",
+                        "outline-variant": "#e2beb9",
+                        "tertiary": "#004654",
+                        "surface-container-highest": "#e0e3e1",
+                        "on-surface-variant": "#5a413c",
+                        "secondary": "#5a5f62",
+                        "primary-fixed": "#ffdad4",
+                        "on-primary-fixed": "#410000",
+                        "primary": "#840000",
+                        "on-tertiary-fixed": "#001f27",
+                        "inverse-on-surface": "#eef1ef",
+                        "surface-container-high": "#e6e9e7",
+                        "charcoal-text": "#22272A",
+                        "secondary-container": "#dce0e4",
+                        "on-primary-fixed-variant": "#910904",
+                        "deep-madder": "#A81E13",
+                        "on-tertiary-fixed-variant": "#004e5e",
+                        "on-secondary-fixed": "#171c1f",
+                        "inverse-primary": "#ffb4a8",
+                        "tertiary-container": "#005f72",
+                        "surface-muted": "#F8FAFB",
+                        "on-secondary-container": "#5e6367",
+                        "surface-container": "#ebefed",
+                        "outline": "#8e706b",
+                        "action-teal": "#009DBB",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f1f4f2",
+                        "on-surface": "#181c1b",
+                        "slate-gray": "#4E5255",
+                        "primary-container": "#a81e13",
+                        "on-error-container": "#93000a",
+                        "surface": "#f7faf8",
+                        "on-primary-container": "#ffbbb1",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#b1ecff",
+                        "background": "#f7faf8",
+                        "secondary-fixed": "#dfe3e7",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#61d5f5",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#b4271b",
+                        "on-tertiary-container": "#68dbfb",
+                        "hospital-white": "#FFFFFF",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e0e3e1",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#181c1b",
+                        "inverse-surface": "#2d3130",
+                        "surface-dim": "#d7dbd9",
+                        "primary-fixed-dim": "#ffb4a8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "stack-lg": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "nav-link": ["Inter"],
+                        "headline-sm": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "nav-link": ["15px", {"lineHeight": "24px", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #F8FAFB; /* surface-muted */
+            font-family: 'Inter', sans-serif;
+            color: #22272A; /* charcoal-text */
+        }
+        .doctor-card:hover {
+            box-shadow: 0 8px 24px rgba(34, 39, 42, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-hospital-white border-b border-[#EEEEEE] transition-all duration-300 h-24">
+    <div class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center gap-4">
+        <!-- Brand -->
+        <a class="mr-4 flex items-center" href="../index.html">
+            <img src="../ibn-i-sina-hastanesi.jpg" alt="İbni Sina Hastanesi Logo" class="h-16 w-auto object-contain">
+        </a>
+        <!-- Tabbed Navigation Links -->
+        <div class="hidden lg:flex items-center h-full">
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="../index.html">Anasayfa</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-deep-madder font-bold border-b-2 border-deep-madder px-3 h-full flex items-center" href="hekimlerimiz.html">Hekimlerimiz</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="onlineislemler.html">Online İşlemler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="iletisim.html">İletişim</a>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center gap-stack-md">
+            <div class="flex items-center gap-2 border-r border-slate-gray/20 pr-4">
+                <span class="text-[11px] font-bold text-deep-madder cursor-pointer">TR</span>
+                <span class="text-[11px] text-slate-gray">|</span>
+                <span class="text-[11px] font-bold text-slate-gray hover:text-deep-madder cursor-pointer transition-colors">EN</span>
+            </div>
+            <a class="flex items-center gap-1.5 text-deep-madder font-bold text-[13px] ml-2" href="tel:08500000000">
+                <span class="material-symbols-outlined text-base">call</span>
+                <span class="">0850 000 00 00</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<!-- Page Content Wrap -->
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="bg-hospital-white py-20 border-b border-[#EEEEEE]">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<nav class="flex mb-4 text-label-caps text-slate-gray">
+<a class="hover:text-deep-madder" href="../index.html">Anasayfa</a>
+<span class="mx-2">/</span>
+<span class="text-deep-madder">Hekimlerimiz</span>
+</nav>
+<h1 class="font-headline-lg text-headline-lg text-charcoal-text md:w-2/3">Uzman Hekim Kadromuz</h1>
+<p class="font-body-lg text-body-lg text-slate-gray mt-4 max-w-2xl">
+                    Sağlığınız için alanında uzman, deneyimli ve modern tıbbın imkanlarını en iyi şekilde kullanan doktorlarımızla hizmetinizdeyiz.
+                </p>
+<!-- Filter Bar -->
+<div class="mt-12 flex flex-wrap gap-4 items-center bg-surface-muted p-4 border border-[#EEEEEE]">
+<div class="flex-1 min-w-[200px]">
+<label class="sr-only">Hekim Ara</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-gray">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-hospital-white border border-[#EEEEEE] focus:border-action-teal focus:ring-0 text-body-md transition-all" placeholder="İsim veya uzmanlık alanı ara..." type="text"/>
+</div>
+</div>
+<div class="w-full md:w-64">
+<select class="w-full py-3 bg-hospital-white border border-[#EEEEEE] focus:border-action-teal focus:ring-0 text-body-md transition-all">
+<option>Tüm Birimler</option>
+<option>Kardiyoloji</option>
+<option>Genel Cerrahi</option>
+<option>Dahiliye</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Doctors Grid Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Doctor Card 1 -->
+<div class="doctor-card bg-hospital-white border border-[#EEEEEE] overflow-hidden transition-all duration-300">
+<div class="h-80 w-full bg-surface-muted relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional studio portrait of a male surgeon, Op. Dr. Muhammet AKAN, wearing a white coat and blue scrubs. The lighting is clinical and bright, set against a soft neutral grey background. The image has a high-end medical magazine aesthetic with shallow depth of field, emphasizing trust and authority in a modern hospital environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwtfet6u8I7eNO29I-_oT3ZWrIBQ169JWd1-jDXtAICwLQUgMR8uozKcaQ1olhv0W5RtrLgwk4aA-GSzLoOjfmGXY6XLjNoCBV-GaEBC0Utz2unySYU8yVZ3xmHPmmUF_fJ9rG1mtwzIQbY7HG6alCo_FXcudkT80tgzfN2AMxOWIxHPz4lIYc4brWGammzlnhjN6fi694zdR5Jp8xgxPdvnSxnpU7REp8b9QZsX8FBjZoTkk6MAmj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-text/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<span class="text-hospital-white font-label-caps tracking-widest">GENEL CERRAHİ</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text">Op. Dr. Muhammet AKAN</h3>
+<p class="font-body-md text-body-md text-slate-gray mb-6">Genel Cerrahi</p>
+<a class="inline-flex items-center justify-center w-full py-3 border border-charcoal-text text-charcoal-text font-bold hover:bg-charcoal-text hover:text-hospital-white transition-all duration-200" href="hekimprofil.html">
+                                Profil Görüntüle
+                            </a>
+</div>
+</div>
+<!-- Doctor Card 2 -->
+<div class="doctor-card bg-hospital-white border border-[#EEEEEE] overflow-hidden transition-all duration-300">
+<div class="h-80 w-full bg-surface-muted relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A clean, professional headshot of Uzm. Dr. Özgür AVŞAR, a male cardiologist in his 40s. He is smiling warmly, wearing a professional medical white coat with a stethoscope around his neck. The setting is a minimalist hospital hallway with soft, natural light-mode illumination, following a pristine clinical aesthetic of whites and blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2tY04KBXdZ-bebKPbKy9abIRy2GK1mBLIs2u6er4mwL_iktMxUDJ3SiCur5zI5U-AM4si-CIUSllysvR5SMakWSOrgHouJmd995MsiU2QJhZSj4MTh1VDDiof3ikT0bmYWwUhopZj7qksqgzUogX-K0R6fSj5pzOP21Vl6rkR43kDn5VfEtSWw-0ZzBqMOrPhO_yZfCzNl3vWvTxOj-0kRuXyX13HTU9tWnjxf3sJxE-DCaVFwSwq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-text/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<span class="text-hospital-white font-label-caps tracking-widest">KARDİYOLOJİ</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text">Uzm. Dr. Özgür AVŞAR</h3>
+<p class="font-body-md text-body-md text-slate-gray mb-6">Kardiyoloji</p>
+<a class="inline-flex items-center justify-center w-full py-3 border border-charcoal-text text-charcoal-text font-bold hover:bg-charcoal-text hover:text-hospital-white transition-all duration-200" href="hekimprofil.html">
+                                Profil Görüntüle
+                            </a>
+</div>
+</div>
+<!-- Doctor Card 3 -->
+<div class="doctor-card bg-hospital-white border border-[#EEEEEE] overflow-hidden transition-all duration-300">
+<div class="h-80 w-full bg-surface-muted relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A sophisticated portrait of Op. Dr. Mustafa ÖZGÜR, a male obstetrician, in a clean and modern hospital office. He is standing confidently in professional medical attire. The background features high-tech medical monitors blurred out. The color palette is composed of soft whites, slate greys, and deep red accents, conveying empathy and clinical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFr0hRKVCQedi77UaAInx7RhaOcnvL65qLjtFRKSSpvxOTI2dnQrb_Qnfmk-eNhAalmmKLinIJEVbjfcE9ASocoQJ4nGPtNR2jb-ekhV64p_4iKH2WrdsjLOFu9wx1S33NMm-jR0aGa3k-fipzLqScd8iW_dJ6W0sTwa1v0lZY5GgiejkpKhyn6TwBtzbb3nGxewaRmHjAFk9i0m82_4EA3uuXzcIjiVUBB_3ukhGUPVA9QsBQ6BME"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-text/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<span class="text-hospital-white font-label-caps tracking-widest">KADIN HASTALIKLARI</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text">Op. Dr. Mustafa ÖZGÜR</h3>
+<p class="font-body-md text-body-md text-slate-gray mb-6">Kadın Hastalıkları ve Doğum</p>
+<a class="inline-flex items-center justify-center w-full py-3 border border-charcoal-text text-charcoal-text font-bold hover:bg-charcoal-text hover:text-hospital-white transition-all duration-200" href="hekimprofil.html">
+                                Profil Görüntüle
+                            </a>
+</div>
+</div>
+<!-- Doctor Card 4 -->
+<div class="doctor-card bg-hospital-white border border-[#EEEEEE] overflow-hidden transition-all duration-300">
+<div class="h-80 w-full bg-surface-muted relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional medical portrait of Uzm. Dr. Ayten YILDIZ, a female pediatrician with a gentle smile. She is wearing a white medical coat. The background is a brightly lit, cheerful yet professional pediatric consultation room with soft pastel colors. The lighting is soft and airy, emphasizing a caring and trustworthy medical professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5wDhuYIL3RCuW11YNUAEC-EPo4LHFuNtRgxdenzTREqsfwRNodnhifRxg4yP4SQgz-6ngpn3U-wZSIn9G_g2pAH2_mFD7Ie08EDCDrAYAEcFbxJNgh8K1VUpX-ZoaFmXMfm9NvDNla6X0LGGHG-LFbcN5wsxa1bzmQC2bnn-NOIFs-IvA0wgkVfCIiSZNMmF_R71Y8II6YhCLefVn19V4lJimx2mg04kOP41mSa5wgAZJ77sbSQ_1"/>
+<div or class="absolute inset-0 bg-gradient-to-t from-charcoal-text/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<span class="text-hospital-white font-label-caps tracking-widest">ÇOCUK SAĞLIĞI</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text">Uzm. Dr. Ayten YILDIZ</h3>
+<p class="font-body-md text-body-md text-slate-gray mb-6">Çocuk Sağlığı ve Hastalıkları</p>
+<a class="inline-flex items-center justify-center w-full py-3 border border-charcoal-text text-charcoal-text font-bold hover:bg-charcoal-text hover:text-hospital-white transition-all duration-200" href="hekimprofil.html">
+                                Profil Görüntüle
+                            </a>
+</div>
+</div>
+<!-- Doctor Card 5 -->
+<div class="doctor-card bg-hospital-white border border-[#EEEEEE] overflow-hidden transition-all duration-300">
+<div class="h-80 w-full bg-surface-muted relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A focused headshot of Op. Dr. Alper ANDAÇ, a male orthopedic surgeon. He is wearing a dark navy blue surgical cap and white coat. The lighting is dramatic but clean, highlighting precision. The environment is a modern hospital wing with technological equipment in the soft-focus background, using a professional color palette of clinical white and steel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgNP7FLP1wmaXwTX8U3vYxAB_3QUdqKpPzzEX50Y1wSZpnGSu0LN1xbZnUSO4NdnGEG8-TidAbygjLlkXoKJGGvmPpkp_uwZe8VhcbnFQ206mq5KKDAAlimAgDY1wL__IWK92lF7NCm0p85jGyaFU2cc_fc38soo8Z8357TW0QJQsMXEeICh-BP5L5qOeiC3A2s77j1mgQQj6rzNS0TAZb-tFdx_7ofgxQhUdktSr3lykzkpP5LdXD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-text/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<span class="text-hospital-white font-label-caps tracking-widest">ORTOPEDİ</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text">Op. Dr. Alper ANDAÇ</h3>
+<p class="font-body-md text-body-md text-slate-gray mb-6">Ortopedi ve Travmatoloji</p>
+<a class="inline-flex items-center justify-center w-full py-3 border border-charcoal-text text-charcoal-text font-bold hover:bg-charcoal-text hover:text-hospital-white transition-all duration-200" href="hekimprofil.html">
+                                Profil Görüntüle
+                            </a>
+</div>
+</div>
+<!-- Doctor Card 6 -->
+<div class="doctor-card bg-hospital-white border border-[#EEEEEE] overflow-hidden transition-all duration-300">
+<div class="h-80 w-full bg-surface-muted relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional portrait of Uzm. Dr. Murat BURAN, an internal medicine specialist. He is standing in a brightly lit medical library or consultation office. He wears a classic white doctor's coat over a formal shirt. The lighting is even and welcoming, with a professional tone that balances authority and approachability in a high-fidelity hospital setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7XAUMujX2oSjRlX6EZx3loB8QE-BZKySmSbwB_qsxtPTh6lWv08FYqBcGUmTgYu8kKjUzaNZvaUh96zdh0dlDlPAId3SV6qh_yJHJVyq3TBsDC_r_pbzKHm9Xej--HsHCUv0BPec6eFPp7Guk_-KeHhf9T_1Fp9EiH8oRNMv98Hpm8ZF7Dg5eMBso4w5vDo4z4iwvTk1V2TfnI3kP18FrM9YfN9zf5jmE_c1mdS917TBSGP6uaHrV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-text/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<span class="text-hospital-white font-label-caps tracking-widest">DAHİLİYE</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text">Uzm. Dr. Murat BURAN</h3>
+<p class="font-body-md text-body-md text-slate-gray mb-6">Dahiliye</p>
+<a class="inline-flex items-center justify-center w-full py-3 border border-charcoal-text text-charcoal-text font-bold hover:bg-charcoal-text hover:text-hospital-white transition-all duration-200" href="hekimprofil.html">
+                                Profil Görüntüle
+                            </a>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-16 flex justify-center">
+<button class="bg-surface-muted border border-[#EEEEEE] text-slate-gray px-12 py-4 font-bold hover:bg-hospital-white hover:text-deep-madder hover:border-deep-madder transition-all">
+                        Daha Fazla Hekim Yükle
+                    </button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-deep-madder py-20">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-md text-headline-md text-hospital-white mb-6">Size Uygun Hekimi Bulamadınız mı?</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed mb-10 max-w-2xl mx-auto">
+                    Branşlarımıza göz atabilir veya 7/24 hizmet veren çağrı merkezimizden destek alabilirsiniz.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-hospital-white text-deep-madder px-10 py-4 font-bold hover:bg-primary-fixed transition-colors" href="tıbbibirimler.html">Birimlerimizi Keşfedin</a>
+<a class="border-2 border-hospital-white text-hospital-white px-10 py-4 font-bold hover:bg-hospital-white hover:text-deep-madder transition-all" href="iletisim.html">İletişime Geçin</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-[#EEEEEE] w-full py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand Section -->
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-deep-madder mb-4">
+                    İbni Sina Hastanesi
+                </div>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed mb-6">
+                    Modern tıp teknolojileri ve uzman kadromuzla sağlığınız için buradayız. Güvenle tedavi olun.
+                </p>
+<div class="flex gap-4">
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+</div>
+</div>
+<!-- Fast Links -->
+<div class="col-span-1">
+<h4 class="font-bold text-charcoal-text mb-4 uppercase tracking-wider text-[12px]">HIZLI ERİŞİM</h4>
+<ul class="space-y-3 font-body-sm text-body-sm">
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a></li>
+<li><a class="text-deep-madder font-bold" href="hekimlerimiz.html">Hekimlerimiz</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="onlineislemler.html">Online İşlemler</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="onlineislemler.html">Randevu Al</a></li>
+</ul>
+</div>
+<!-- Corporate -->
+<div class="col-span-1">
+<h4 class="font-bold text-charcoal-text mb-4 uppercase tracking-wider text-[12px]">KURUMSAL</h4>
+<ul class="space-y-3 font-body-sm text-body-sm">
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="kurumsal.html">Hakkımızda</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="#">KVKK</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="#">Gizlilik Politikası</a></li>
+<li><a class="text-slate-gray hover:text-deep-madder transition-colors" href="#">Kullanım Koşulları</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div class="col-span-1">
+<h4 class="font-bold text-charcoal-text mb-4 uppercase tracking-wider text-[12px]">İLETİŞİM</h4>
+<div class="space-y-3 font-body-sm text-body-sm text-slate-gray">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-action-teal">phone</span>
+                        444 00 00
+                    </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-action-teal">mail</span>
+                        info@ibnisinahastanesi.com
+                    </p>
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-action-teal">location_on</span>
+                        Atatürk Bulvarı No:123, <br/>Çankaya / Ankara
+                    </p>
+</div>
+</div>
+</div>
+<!-- Bottom Footer -->
+<div class="max-w-container-max mx-auto px-margin-desktop mt-12 pt-8 border-t border-[#EEEEEE] flex flex-col md:flex-row justify-between items-center opacity-90">
+<p class="font-body-sm text-body-sm text-slate-gray">
+                © 2024 İbni Sina Hastanesi. Tüm Hakları Saklıdır.
+            </p>
+<div class="flex gap-4 mt-4 md:mt-0 font-body-sm text-body-sm text-slate-gray">
+<a class="hover:text-action-teal" href="#">TR</a>
+<span class="text-outline-variant opacity-30">|</span>
+<a class="hover:text-action-teal" href="#">EN</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Interaction logic
+        document.querySelectorAll('.doctor-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('py-2');
+                header.classList.remove('h-20');
+                header.classList.add('h-16');
+            } else {
+                header.classList.remove('py-2');
+                header.classList.add('h-20');
+                header.classList.remove('h-16');
+            }
+        });
+    </script>
+</body></html>

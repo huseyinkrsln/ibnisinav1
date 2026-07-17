@@ -1,0 +1,501 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nöbetçi Eczaneler | İbni Sina Hastanesi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .pharmacy-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+        }
+        .pharmacy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(34, 39, 42, 0.1);
+        }
+        .filter-btn.active {
+            background-color: #A81E13;
+            color: white;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-fixed": "#171c1f",
+                "inverse-surface": "#2d3130",
+                "surface-container-highest": "#e0e3e1",
+                "surface-bright": "#f7faf8",
+                "tertiary-fixed-dim": "#61d5f5",
+                "secondary-fixed": "#dfe3e7",
+                "on-secondary": "#ffffff",
+                "primary-container": "#a81e13",
+                "on-primary": "#ffffff",
+                "on-surface": "#181c1b",
+                "primary-fixed": "#ffdad4",
+                "surface-dim": "#d7dbd9",
+                "on-secondary-container": "#5e6367",
+                "inverse-on-surface": "#eef1ef",
+                "tertiary-container": "#005f72",
+                "surface-container": "#ebefed",
+                "on-secondary-fixed-variant": "#42474b",
+                "outline-variant": "#e2beb9",
+                "surface-variant": "#e0e3e1",
+                "slate-gray": "#4E5255",
+                "charcoal-text": "#22272A",
+                "outline": "#8e706b",
+                "surface": "#f7faf8",
+                "on-surface-variant": "#5a413c",
+                "surface-container-low": "#f1f4f2",
+                "on-tertiary-fixed-variant": "#004e5e",
+                "tertiary": "#004654",
+                "secondary-container": "#dce0e4",
+                "background": "#f7faf8",
+                "deep-madder": "#A81E13",
+                "primary-fixed-dim": "#ffb4a8",
+                "secondary": "#5a5f62",
+                "on-primary-container": "#ffbbb1",
+                "on-tertiary-fixed": "#001f27",
+                "primary": "#840000",
+                "error-container": "#ffdad6",
+                "surface-tint": "#b4271b",
+                "tertiary-fixed": "#b1ecff",
+                "secondary-fixed-dim": "#c3c7cb",
+                "error": "#ba1a1a",
+                "surface-muted": "#F8FAFB",
+                "surface-container-high": "#e6e9e7",
+                "on-tertiary": "#ffffff",
+                "on-primary-fixed": "#410000",
+                "inverse-primary": "#ffb4a8",
+                "hospital-white": "#FFFFFF",
+                "on-primary-fixed-variant": "#910904",
+                "surface-container-lowest": "#ffffff",
+                "on-error": "#ffffff",
+                "action-teal": "#009DBB",
+                "on-tertiary-container": "#68dbfb",
+                "on-background": "#181c1b",
+                "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "section-gap": "80px",
+                "margin-mobile": "16px",
+                "stack-lg": "24px",
+                "stack-sm": "8px",
+                "gutter": "24px",
+                "stack-md": "16px",
+                "margin-desktop": "40px",
+                "container-max": "1280px"
+            },
+            "fontFamily": {
+                "nav-link": ["Inter"],
+                "headline-lg": ["Montserrat"],
+                "body-md": ["Inter"],
+                "headline-sm": ["Montserrat"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Montserrat"],
+                "label-caps": ["Inter"],
+                "body-sm": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-charcoal-text font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-hospital-white border-b border-[#EEEEEE] transition-all duration-300 h-24">
+    <div class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center gap-4">
+        <!-- Brand -->
+        <a class="mr-4 flex items-center" href="../index.html">
+            <img src="../ibn-i-sina-hastanesi.jpg" alt="İbni Sina Hastanesi Logo" class="h-16 w-auto object-contain">
+        </a>
+        <!-- Tabbed Navigation Links -->
+        <div class="hidden lg:flex items-center h-full">
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="../index.html">Anasayfa</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="onlineislemler.html">Online İşlemler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="iletisim.html">İletişim</a>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center gap-stack-md">
+            <div class="flex items-center gap-2 border-r border-slate-gray/20 pr-4">
+                <span class="text-[11px] font-bold text-deep-madder cursor-pointer">TR</span>
+                <span class="text-[11px] text-slate-gray">|</span>
+                <span class="text-[11px] font-bold text-slate-gray hover:text-deep-madder cursor-pointer transition-colors">EN</span>
+            </div>
+            <a class="flex items-center gap-1.5 text-deep-madder font-bold text-[13px] ml-2" href="tel:08500000000">
+                <span class="material-symbols-outlined text-base">call</span>
+                <span class="">0850 000 00 00</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-10" data-alt="A high-end professional healthcare environment with soft blue and white hues, blurred medical equipment in the background, creating a clinical yet calm atmosphere for a hospital website hero section." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA8hYBKCubIzje3eUJVOHmBo7yhzn91zuXXkLLyAIg9OfqRJmGTqv84lf_s339fb_o_HIgvpjUUppfSlkRebcjuYll3CEJ3e_FXGfeweFHNx3BloChRNVALRvzYfkzqFKlTvOVbgQbK58ARawXwSOSeiePh4pugjmzDmCxd8chGt4vcahKsPZwzln2aHkW-kqw7rqrsjVy4V0D_rv-QEuuzVzytnEhIwmks9OE8RIhziCSOnZK5f4ln&quot;);"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="max-w-3xl">
+<nav class="flex mb-4 text-label-caps font-label-caps text-slate-gray uppercase tracking-widest">
+<a class="hover:text-deep-madder" href="../index.html">Anasayfa</a>
+<span class="mx-2">/</span>
+<span class="text-deep-madder">Nöbetçi Eczaneler</span>
+</nav>
+<h1 class="font-headline-lg text-headline-lg text-charcoal-text mb-6">Nöbetçi Eczaneler</h1>
+<p class="font-body-lg text-body-lg text-slate-gray leading-relaxed">
+                    Sağlığınız için Osmaniye ve çevre ilçelerindeki güncel nöbetçi eczane bilgilerine bu sayfadan hızlıca ulaşabilir, tek tuşla arama yapabilir veya yol tarifi alabilirsiniz.
+                </p>
+</div>
+</div>
+</section>
+<!-- Filter Section -->
+
+<!-- Pharmacy Cards Grid -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="pharmacyGrid">
+<!-- Card 1 -->
+<div class="pharmacy-card bg-hospital-white p-6 rounded-xl border border-[#EEEEEE] flex flex-col h-full transition-all duration-500 opacity-100 translate-y-0" data-district="MERKEZ">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container/10 text-deep-madder px-3 py-1 rounded text-label-caps font-label-caps">MERKEZ</div>
+<span class="material-symbols-outlined text-action-teal">local_pharmacy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-2 uppercase">GAMZE ECZANESİ</h3>
+<div class="space-y-3 flex-grow mb-6">
+<div class="flex gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-deep-madder shrink-0">location_on</span>
+<p class="font-body-sm text-body-sm">RAUFBEY MAHALLESİ 9552 SOKAK NO:15/B RAUFBEY MAH. KARACAMİİ SOKAĞI 24 NOLU ASM YANI (AYSANLAR PETROL CİVARI)</p>
+</div>
+<div class="flex gap-3 text-slate-gray items-center">
+<span class="material-symbols-outlined text-deep-madder shrink-0">call</span>
+<p class="font-body-sm text-body-sm">0328 825 22 99</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<a class="flex items-center justify-center gap-2 border border-charcoal-text text-charcoal-text py-2 rounded-lg font-bold hover:bg-charcoal-text hover:text-white transition-colors" href="tel:03288252299">
+<span class="material-symbols-outlined text-lg">call</span> Ara
+                        </a>
+<a class="flex items-center justify-center gap-2 bg-deep-madder text-white py-2 rounded-lg font-bold hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">directions</span> Yol Tarifi
+                        </a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="pharmacy-card bg-hospital-white p-6 rounded-xl border border-[#EEEEEE] flex flex-col h-full transition-all duration-500 opacity-100 translate-y-0" data-district="MERKEZ">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container/10 text-deep-madder px-3 py-1 rounded text-label-caps font-label-caps">MERKEZ</div>
+<span class="material-symbols-outlined text-action-teal">local_pharmacy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-2 uppercase">SARPKAYA ECZANESİ</h3>
+<div class="space-y-3 flex-grow mb-6">
+<div class="flex gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-deep-madder shrink-0">location_on</span>
+<p class="font-body-sm text-body-sm">Kadin doğum hastanesi karşısı MERKEZ/OSMANIYE KAZIM KARABEKİR MAH. 6502 SOKAK NO:9/B</p>
+</div>
+<div class="flex gap-3 text-slate-gray items-center">
+<span class="material-symbols-outlined text-deep-madder shrink-0">call</span>
+<p class="font-body-sm text-body-sm">0328 813 15 13</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<a class="flex items-center justify-center gap-2 border border-charcoal-text text-charcoal-text py-2 rounded-lg font-bold hover:bg-charcoal-text hover:text-white transition-colors" href="tel:03288131513">
+<span class="material-symbols-outlined text-lg">call</span> Ara
+                        </a>
+<a class="flex items-center justify-center gap-2 bg-deep-madder text-white py-2 rounded-lg font-bold hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">directions</span> Yol Tarifi
+                        </a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="pharmacy-card bg-hospital-white p-6 rounded-xl border border-[#EEEEEE] flex flex-col h-full transition-all duration-500 opacity-100 translate-y-0" data-district="MERKEZ">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container/10 text-deep-madder px-3 py-1 rounded text-label-caps font-label-caps">MERKEZ</div>
+<span class="material-symbols-outlined text-action-teal">local_pharmacy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-2 uppercase">VUSLAT ECZANESİ</h3>
+<div class="space-y-3 flex-grow mb-6">
+<div class="flex gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-deep-madder shrink-0">location_on</span>
+<p class="font-body-sm text-body-sm">KARAÇAY MAH.6009 SOK.NO:2/A</p>
+</div>
+<div class="flex gap-3 text-slate-gray items-center">
+<span class="material-symbols-outlined text-deep-madder shrink-0">call</span>
+<p class="font-body-sm text-body-sm">0328 825 82 11</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<a class="flex items-center justify-center gap-2 border border-charcoal-text text-charcoal-text py-2 rounded-lg font-bold hover:bg-charcoal-text hover:text-white transition-colors" href="tel:03288258211">
+<span class="material-symbols-outlined text-lg">call</span> Ara
+                        </a>
+<a class="flex items-center justify-center gap-2 bg-deep-madder text-white py-2 rounded-lg font-bold hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">directions</span> Yol Tarifi
+                        </a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="pharmacy-card bg-hospital-white p-6 rounded-xl border border-[#EEEEEE] flex flex-col h-full transition-all duration-500 opacity-100 translate-y-0" data-district="BAHÇE">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container/10 text-deep-madder px-3 py-1 rounded text-label-caps font-label-caps">BAHÇE</div>
+<span class="material-symbols-outlined text-action-teal">local_pharmacy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-2 uppercase">AÇIKGÖZ ECZANESİ</h3>
+<div class="space-y-3 flex-grow mb-6">
+<div class="flex gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-deep-madder shrink-0">location_on</span>
+<p class="font-body-sm text-body-sm">BAHÇELİEVLER MAH. DEVLET BAHÇELİ BULVARI NO:11/C 1 NOLU ASM KARŞISI</p>
+</div>
+<div class="flex gap-3 text-slate-gray items-center">
+<span class="material-symbols-outlined text-deep-madder shrink-0">call</span>
+<p class="font-body-sm text-body-sm">0328 861 44 33</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<a class="flex items-center justify-center gap-2 border border-charcoal-text text-charcoal-text py-2 rounded-lg font-bold hover:bg-charcoal-text hover:text-white transition-colors" href="tel:03288614433">
+<span class="material-symbols-outlined text-lg">call</span> Ara
+                        </a>
+<a class="flex items-center justify-center gap-2 bg-deep-madder text-white py-2 rounded-lg font-bold hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">directions</span> Yol Tarifi
+                        </a>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="pharmacy-card bg-hospital-white p-6 rounded-xl border border-[#EEEEEE] flex flex-col h-full transition-all duration-500 opacity-100 translate-y-0" data-district="DÜZİÇİ">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container/10 text-deep-madder px-3 py-1 rounded text-label-caps font-label-caps">DÜZİÇİ</div>
+<span class="material-symbols-outlined text-action-teal">local_pharmacy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-2 uppercase">ELMAS ECZANESİ</h3>
+<div class="space-y-3 flex-grow mb-6">
+<div class="flex gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-deep-madder shrink-0">location_on</span>
+<p class="font-body-sm text-body-sm">YEŞİLOVA MAH. AYDINLAR SOK. NO:42</p>
+</div>
+<div class="flex gap-3 text-slate-gray items-center">
+<span class="material-symbols-outlined text-deep-madder shrink-0">call</span>
+<p class="font-body-sm text-body-sm">0543 261 34 08</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<a class="flex items-center justify-center gap-2 border border-charcoal-text text-charcoal-text py-2 rounded-lg font-bold hover:bg-charcoal-text hover:text-white transition-colors" href="tel:05432613408">
+<span class="material-symbols-outlined text-lg">call</span> Ara
+                        </a>
+<a class="flex items-center justify-center gap-2 bg-deep-madder text-white py-2 rounded-lg font-bold hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">directions</span> Yol Tarifi
+                        </a>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="pharmacy-card bg-hospital-white p-6 rounded-xl border border-[#EEEEEE] flex flex-col h-full transition-all duration-500 opacity-100 translate-y-0" data-district="KADİRLİ">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container/10 text-deep-madder px-3 py-1 rounded text-label-caps font-label-caps">KADİRLİ</div>
+<span class="material-symbols-outlined text-action-teal">local_pharmacy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-2 uppercase">GÜZIN ECZANESİ</h3>
+<div class="space-y-3 flex-grow mb-6">
+<div class="flex gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-deep-madder shrink-0">location_on</span>
+<p class="font-body-sm text-body-sm">TUFANPASA MAH. 69 SK. NO:1 KADIRLI/OSMANIYE TUFANPAŞA MAH.1 NOLU ASM KARŞISI İLÇE TARIM CİVARI</p>
+</div>
+<div class="flex gap-3 text-slate-gray items-center">
+<span class="material-symbols-outlined text-deep-madder shrink-0">call</span>
+<p class="font-body-sm text-body-sm">0328 717 81 17</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<a class="flex items-center justify-center gap-2 border border-charcoal-text text-charcoal-text py-2 rounded-lg font-bold hover:bg-charcoal-text hover:text-white transition-colors" href="tel:03287178117">
+<span class="material-symbols-outlined text-lg">call</span> Ara
+                        </a>
+<a class="flex items-center justify-center gap-2 bg-deep-madder text-white py-2 rounded-lg font-bold hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">directions</span> Yol Tarifi
+                        </a>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="pharmacy-card bg-hospital-white p-6 rounded-xl border border-[#EEEEEE] flex flex-col h-full transition-all duration-500 opacity-100 translate-y-0" data-district="KADİRLİ">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container/10 text-deep-madder px-3 py-1 rounded text-label-caps font-label-caps">KADİRLİ</div>
+<span class="material-symbols-outlined text-action-teal">local_pharmacy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-2 uppercase">CAN ECZANESİ</h3>
+<div class="space-y-3 flex-grow mb-6">
+<div class="flex gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-deep-madder shrink-0">location_on</span>
+<p class="font-body-sm text-body-sm">MUSTAFA YAĞIZ MAH. ARSLANTAŞ CAD. NO:119/A ŞEHİT MUSTAFA YAĞIZ MAHALLESİ KARATEPE YOLU ÜZERİ HALET ÇAMBEL İLKOKULU YANI</p>
+</div>
+<div class="flex gap-3 text-slate-gray items-center opacity-50">
+<span class="material-symbols-outlined text-deep-madder shrink-0">call_received</span>
+<p class="font-body-sm text-body-sm italic">Telefon bilgisi bulunmamaktadır.</p>
+</div>
+</div>
+<div class="grid grid-cols-1">
+<a class="flex items-center justify-center gap-2 bg-deep-madder text-white py-2 rounded-lg font-bold hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">directions</span> Yol Tarifi
+                        </a>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="pharmacy-card bg-hospital-white p-6 rounded-xl border border-[#EEEEEE] flex flex-col h-full transition-all duration-500 opacity-100 translate-y-0" data-district="TOPRAKKALE">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-container/10 text-deep-madder px-3 py-1 rounded text-label-caps font-label-caps">TOPRAKKALE</div>
+<span class="material-symbols-outlined text-action-teal">local_pharmacy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-2 uppercase">TOPRAKKALE ECZANESİ</h3>
+<div class="space-y-3 flex-grow mb-6">
+<div class="flex gap-3 text-slate-gray">
+<span class="material-symbols-outlined text-deep-madder shrink-0">location_on</span>
+<p class="font-body-sm text-body-sm">TOPRAKKALE DEVLET HASTANESİ KARŞISI</p>
+</div>
+<div class="flex gap-3 text-slate-gray items-center">
+<span class="material-symbols-outlined text-deep-madder shrink-0">call</span>
+<p class="font-body-sm text-body-sm">0328 633 20 53</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<a class="flex items-center justify-center gap-2 border border-charcoal-text text-charcoal-text py-2 rounded-lg font-bold hover:bg-charcoal-text hover:text-white transition-colors" href="tel:03286332053">
+<span class="material-symbols-outlined text-lg">call</span> Ara
+                        </a>
+<a class="flex items-center justify-center gap-2 bg-deep-madder text-white py-2 rounded-lg font-bold hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">directions</span> Yol Tarifi
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map/CTA Section -->
+<section class="py-section-gap bg-surface-container">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="rounded-2xl overflow-hidden shadow-xl border-4 border-white h-96 relative">
+<img class="w-full h-full object-cover" data-alt="A stylized digital map showing the location of hospitals and pharmacies in Osmaniye, Turkey. The design is clean with medical markers in red and teal, following a modern clinical aesthetic." data-location="Osmaniye, Turkey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhvjha9-5ktHfCocRa-eINqGOk0jI-TDpnPaQznO2eWTOC_KvrYoY3NCN5E7IFzYLXvTGQlY5b7f_EH2_hsHnD0y28hCnctQ2ftEp_b57BolWd3e7S1gG9JCzt1uFU7nB7n21sgpDr739TT7nTDWVvXo5UhwIVuQ7tf7C9LsADgwGXUBhGJ5PajLUVVo_wC2cpRfEIqh51YmY0Chj9vXGu3HDrAAM39Lhtii909xWKG8JLK6me_t0t">
+<div class="absolute bottom-6 left-6 bg-white p-4 rounded-xl shadow-lg flex items-center gap-4">
+<div class="bg-deep-madder/10 p-2 rounded-full">
+<span class="material-symbols-outlined text-deep-madder">emergency</span>
+</div>
+<div>
+<h4 class="font-bold">Size En Yakın Eczane</h4>
+<p class="text-sm text-slate-gray">Konum izni vererek size en yakın olanı bulun.</p>
+</div>
+</div>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-charcoal-text mb-6">Acil Durumlar İçin 7/24 Yanınızdayız</h2>
+<p class="font-body-lg text-body-lg text-slate-gray mb-8">
+                        Hastanemiz acil servisi 7 gün 24 saat uzman hekim kadrosuyla hizmet vermektedir. İlaç temini konusunda sıkıntı yaşamanız durumunda en yakın nöbetçi eczaneye yönlendirme için danışmamızdan destek alabilirsiniz.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-[#EEEEEE]">
+<span class="material-symbols-outlined text-action-teal text-3xl">support_agent</span>
+<div>
+<p class="text-label-caps font-label-caps text-slate-gray uppercase">Hastane Danışma</p>
+<p class="text-headline-sm font-bold text-charcoal-text">0328 813 50 10</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-dim border-t border-[#EEEEEE] w-full py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div>
+<a class="font-headline-sm text-headline-sm font-bold text-deep-madder mb-4 block" href="../index.html">İbni Sina Hastanesi</a>
+<p class="font-body-sm text-body-sm text-slate-gray">Mareşal Fevzi Çakmak, 7520. Sk. No:1, 80020 Osmaniye Merkez/Osmaniye</p>
+<div class="flex gap-4">
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined">facebook</span></a>
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-4">Hızlı Erişim</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-slate-gray">
+<li class=""><a class="hover:text-action-teal" href="kurumsal.html">Kurumsal</a></li>
+<li class=""><a class="hover:text-action-teal" href="tıbbibirimler.html">Tıbbi Birimler</a></li>
+<li class=""><a class="hover:text-action-teal" href="hekimlerimiz.html">Hekimlerimiz</a></li>
+<li class=""><a class="hover:text-action-teal" href="isbasvurusu.html">İnsan Kaynakları</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Birimlerimiz</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-slate-gray">
+<li class=""><a class="hover:text-action-teal" href="tıbbibirimler.html">Acil Servis</a></li>
+<li class=""><a class="hover:text-action-teal" href="tıbbibirimler.html">Radyoloji</a></li>
+<li class=""><a class="hover:text-action-teal" href="tıbbibirimler.html">Laboratuvar</a></li>
+<li class=""><a class="hover:text-action-teal" href="#">Hoşgeldin Bebek</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Kurumsal</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-slate-gray">
+<li class=""><a class="hover:text-action-teal" href="#">KVKK</a></li>
+<li class=""><a class="hover:text-action-teal" href="#">Gizlilik Politikası</a></li>
+<li class=""><a class="hover:text-action-teal" href="#">Kullanım Koşulları</a></li>
+<li class=""><a class="hover:text-action-teal" href="iletisim.html">İletişim</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-12 pt-8 border-t border-[#EEEEEE] text-center">
+<p class="font-body-sm text-body-sm text-slate-gray opacity-90">© 2024 İbni Sina Hastanesi. Tüm Hakları Saklıdır.</p>
+</div>
+</footer>
+<script>
+        function filterPharmacies(district, btn) {
+            // Update filter buttons
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.pharmacy-card');
+            cards.forEach(card => {
+                if (district === 'HEPSİ' || card.dataset.district === district) {
+                    card.style.display = 'flex';
+                    card.classList.add('animate-fade-in');
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileMenuToggle');
+        mobileToggle.addEventListener('click', () => {
+            alert('Mobil menü yakında hizmetinizde!');
+        });
+
+        // Simple smooth entrance for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.pharmacy-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-500');
+            observer.observe(card);
+        });
+    </script>
+
+
+</body></html>

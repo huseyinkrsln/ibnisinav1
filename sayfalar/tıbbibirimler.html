@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#001f27",
+                    "outline-variant": "#e2beb9",
+                    "inverse-primary": "#ffb4a8",
+                    "on-secondary-fixed": "#171c1f",
+                    "tertiary-container": "#005f72",
+                    "tertiary-fixed-dim": "#61d5f5",
+                    "on-tertiary-container": "#68dbfb",
+                    "on-surface-variant": "#5a413c",
+                    "background": "#f7faf8",
+                    "tertiary": "#004654",
+                    "inverse-on-surface": "#eef1ef",
+                    "on-primary-fixed": "#410000",
+                    "surface-muted": "#F8FAFB",
+                    "surface-dim": "#d7dbd9",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#b4271b",
+                    "surface-container-high": "#e6e9e7",
+                    "surface-container": "#ebefed",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#c3c7cb",
+                    "hospital-white": "#FFFFFF",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "deep-madder": "#A81E13",
+                    "on-secondary-fixed-variant": "#42474b",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#dfe3e7",
+                    "tertiary-fixed": "#b1ecff",
+                    "outline": "#8e706b",
+                    "surface-container-low": "#f1f4f2",
+                    "on-secondary-container": "#5e6367",
+                    "surface": "#f7faf8",
+                    "on-tertiary-fixed-variant": "#004e5e",
+                    "slate-gray": "#4E5255",
+                    "on-primary-container": "#ffbbb1",
+                    "primary": "#840000",
+                    "charcoal-text": "#22272A",
+                    "primary-container": "#a81e13",
+                    "on-background": "#181c1b",
+                    "surface-bright": "#f7faf8",
+                    "surface-container-highest": "#e0e3e1",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "action-teal": "#009DBB",
+                    "surface-variant": "#e0e3e1",
+                    "primary-fixed": "#ffdad4",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#910904",
+                    "on-surface": "#181c1b",
+                    "secondary": "#5a5f62",
+                    "secondary-container": "#dce0e4",
+                    "inverse-surface": "#2d3130"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap": "80px",
+                    "margin-mobile": "16px",
+                    "stack-lg": "24px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "label-caps": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "body-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "nav-link": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "nav-link": ["15px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    }catch(_e){}</script><meta charset="utf-8"/></head><body class="bg-background font-body-md text-charcoal-text min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-hospital-white border-b border-[#EEEEEE] transition-all duration-300 h-24">
+<div class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center gap-4">
+        <!-- Brand -->
+        <a class="mr-4 flex items-center" href="../index.html">
+            <img src="../ibn-i-sina-hastanesi.jpg" alt="İbni Sina Hastanesi Logo" class="h-16 w-auto object-contain">
+        </a>
+<!-- Tabbed Navigation Links -->
+<div class="hidden lg:flex items-center h-full">
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="../index.html">Anasayfa</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-deep-madder font-bold border-b-2 border-deep-madder px-3 h-full flex items-center" href="tıbbibirimler.html">Tıbbi Birimler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a>
+<a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="onlineislemler.html">Online İşlemler</a>
+<a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="iletisim.html">İletişim</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-stack-md">
+<div class="flex items-center gap-2 border-r border-slate-gray/20 pr-4">
+<span class="text-[11px] font-bold text-deep-madder cursor-pointer">TR</span>
+<span class="text-[11px] text-slate-gray">|</span>
+<span class="text-[11px] font-bold text-slate-gray hover:text-deep-madder cursor-pointer transition-colors">EN</span>
+</div>
+<a class="flex items-center gap-1.5 text-deep-madder font-bold text-[13px] ml-2" href="tel:08500000000">
+<span class="material-symbols-outlined text-base">call</span>
+<span class="">0850 000 00 00</span>
+</a>
+</div>
+</div>
+</nav>
+<main class="flex-grow pt-24">
+<!-- Hero Section -->
+<section class="bg-surface-muted py-24 relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="max-w-2xl">
+<h1 class="font-headline-lg text-headline-lg text-deep-madder mb-stack-md">
+                        Tıbbi Birimlerimiz
+                    </h1>
+<p class="font-body-lg text-body-lg text-slate-gray">
+                        İleri tıp teknolojisi ve uzman hekim kadromuz ile her branşta güvenilir sağlık hizmeti sunuyoruz. Sağlığınız bizim için en büyük önceliktir.
+                    </p>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute -right-20 -bottom-20 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[400px] text-deep-madder">medical_services</span>
+</div>
+</section>
+<!-- Search & Filter Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop -mt-10 relative z-20">
+<div class="bg-hospital-white p-gutter rounded-xl shadow-sm border border-[#EEEEEE] flex flex-col md:flex-row gap-gutter items-center justify-between">
+<div class="relative w-full mx-auto max-w-2xl">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-gray">search</span>
+<input class="w-full pl-12 pr-4 py-3 border border-[#EEEEEE] rounded focus:ring-2 focus:ring-action-teal focus:border-transparent outline-none transition-all font-body-md" id="unit-search" placeholder="Birim ara..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Medical Units Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter" id="units-grid">
+<!-- Acil -->
+<div class="unit-card bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-xl flex flex-col items-center text-center transition-all duration-300" data-category="dahili">
+<div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-stack-md text-deep-madder">
+<span class="material-symbols-outlined text-4xl">emergency</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Acil</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">7/24 kesintisiz hizmet veren uzman acil müdahale birimi.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+<!-- -->
+<div class="unit-card bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-xl flex flex-col items-center text-center transition-all duration-300" data-category="cerrahi">
+<div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-stack-md text-deep-madder">
+<span class="material-symbols-outlined text-4xl">medical_mask</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Anestezi</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Modern anestezi teknikleri ve reanimasyon hizmetleri.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+<!-- Beyin Cerrahisi -->
+<div class="unit-card bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-xl flex flex-col items-center text-center transition-all duration-300" data-category="cerrahi">
+<div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-stack-md text-deep-madder">
+<span class="material-symbols-outlined text-4xl">neurology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Beyin Cerrahisi</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Omurilik ve sinir sistemi cerrahi müdahaleleri.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+<!-- Çocuk Sağlığı -->
+<div class="unit-card bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-xl flex flex-col items-center text-center transition-all duration-300" data-category="dahili">
+<div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-stack-md text-deep-madder">
+<span class="material-symbols-outlined text-4xl">child_care</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Çocuk Sağlığı</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">0-18 yaş aralığı için kapsamlı sağlık ve hastalık takibi.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+<!-- Dahiliye -->
+<div class="unit-card bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-xl flex flex-col items-center text-center transition-all duration-300" data-category="dahili">
+<div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-stack-md text-deep-madder">
+<span class="material-symbols-outlined text-4xl">stethoscope</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Dahiliye</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">İç hastalıkları teşhis ve tedavi merkezi.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+<!-- Göz -->
+<div class="unit-card overflow-hidden bg-hospital-white border border-[#EEEEEE] rounded-xl flex flex-col transition-all duration-300" data-category="dahili">
+<div class="h-40 bg-cover bg-center" data-alt="A detailed closeup of a modern ophthalmology diagnostic eye examination device in a sterile hospital clinic. The lighting is bright and professional, highlighting the high-precision lenses and sensors. The color palette reflects the clinical medical precision of the hospital with clean whites and subtle metallic accents. The scene communicates advanced eye care and trust." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhYibI1s6c5aWY8yd-saFwZo34pe9bBd_xO2jQ5CzjN-odDa8ixp8ujfNoHAwueEtm1vWWwdRnBmSeEG91vQyIhkvuLAlqGRzZS6dd4U08OCDfyvl9Gp2iido0M_UnELu0IsnKqhI4FTLmjIvhHyDffJN6_exKPbe2XSq3EwisMALBvw5qyfm30l1ChHvLatGqfeo_wLkYeI88R059yFy1CJKAS3XLf3J703IgyDGTK4IqNDffvnkD");'></div>
+<div class="p-stack-lg flex flex-col items-center text-center">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Göz Polikliniği</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Kapsamlı göz muayenesi ve görme kusurları tedavisi.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+</div>
+<!-- Kadın Doğum -->
+<div class="unit-card overflow-hidden bg-hospital-white border border-[#EEEEEE] rounded-xl flex flex-col transition-all duration-300" data-category="cerrahi">
+<div class="h-40 bg-cover bg-center" data-alt="A professional medical setting showing a smiling nurse in surgical attire, with a soft-focus background of a postpartum hospital room. The image uses warm, soft clinical lighting to convey empathetic care and maternal health. High-key white surfaces and soft blue medical scrubs maintain the corporate medical aesthetic while adding a touch of human warmth. It captures a moment of gentle healthcare excellence." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhpVUX73z67CafGvIaCNrhDUY-8uP2qYLEqjeBUFNpDL387Ov8NrhZlEFJMayY3cFDONWacE92Fg0DXsJrhAbbUGwXz6Jtxp5Kfod2e9RjB9XXObCvW-_UnjQaS0glFcsds6lMn8L8YwnXYbWmvgNGsUrxxSc0TC8qEPv59yr8htrC0VWxUmMaQLG_gSGyCWuvxvJ87wLj0MwUnB1O_eNjYhHbgamy0etkEF293iOLh_XNDtB5hjtH");'></div>
+<div class="p-stack-lg flex flex-col items-center text-center">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Kadın Doğum</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Gebelik takibi ve kadın hastalıkları cerrahisi.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+</div>
+<!-- Kardiyoloji -->
+<div class="unit-card bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-xl flex flex-col items-center text-center transition-all duration-300" data-category="dahili">
+<div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-stack-md text-deep-madder">
+<span class="material-symbols-outlined text-4xl">cardiology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Kardiyoloji</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Kalp ve damar sağlığı teşhis, tedavi ve takip ünitesi.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+<!-- KBB -->
+<div class="unit-card overflow-hidden bg-hospital-white border border-[#EEEEEE] rounded-xl flex flex-col transition-all duration-300" data-category="cerrahi">
+<div class="h-40 bg-cover bg-center" data-alt="A high-quality medical illustration of human sinuses shown in both frontal and lateral views, set against a clean white background. The diagram is detailed, labels various sinus cavities clearly, and uses professional medical color tones. The lighting is even and high-key, suitable for a clinical educational context. The style is precise and modern, reflecting the advanced diagnostic capabilities of the hospital." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAudnjMt4weXcdW9_UsaCJKeuMHEfae4JmaD6ahG66naWuTFHJSGxKFzm7GHKE2edyMoqa6cNzK55s3z7_-HHn42Wcb848ipznV5s-Ci7CQJ1xFAd19eA8qnwLc4XVz133K1nDb-Ds9mz04iuj3AQ7Fsv4tG8IvWrjYia0oXfxGcK7w3jTAzEUvwn_yjkJsoD7eZ8FE3G8Np0UhQWicO0LsGyTpCt1YIU0LZ-rnQvpV8gcr6K1e9BNS");'></div>
+<div class="p-stack-lg flex flex-col items-center text-center">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Kulak Burun Boğaz</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Üst solunum yolları ve işitme sistemi uzmanlığı.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+</div>
+<!-- Laboratuarlar -->
+<div class="unit-card overflow-hidden bg-hospital-white border border-[#EEEEEE] rounded-xl flex flex-col transition-all duration-300" data-category="tani">
+<div class="h-40 bg-cover bg-center" data-alt="Two professional scientists in white laboratory coats working in a bright, modern medical research lab. They are analyzing a chemical solution in a flask amidst high-precision glass equipment like beakers and test tubes. The background features faint chemical structures, suggesting advanced scientific research. The lighting is cool-toned and professional, emphasizing a sterile, high-tech environment consistent with medical excellence." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAo9XltQGswY6J78Acgvh-McxTBlQk1srRy-eHUZc3gCWVML9CCYLguBxRk9xf80odx8nLQNgf3Grdc-OvDRm2OwoW6xuABCWdGiKBMYm-3D3Tb9ehnOFqlCh73Mrdww_qmh8EHgxPU_3qh8VjX4_PQzZG_tkw86NkJNmI_CmisJe4N11fNR0OOw2AI6dcxt51UDs0tCm9V9Rf0i_bgDeJqiXQT9QQs0SACd_lonxJxdy26XLA-hFEo");'></div>
+<div class="p-stack-lg flex flex-col items-center text-center">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Laboratuarlar</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Hızlı ve güvenilir sonuçlar veren biyokimya laboratuvarı.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+</div>
+<!-- Fizik Tedavi -->
+<div class="unit-card overflow-hidden bg-hospital-white border border-[#EEEEEE] rounded-xl flex flex-col transition-all duration-300" data-category="dahili">
+<div class="h-40 bg-cover bg-center" data-alt="A spacious and brightly lit physical therapy and rehabilitation center inside a modern hospital. Patients are seen working with professional therapists on specialized rehabilitation equipment like parallel bars. The flooring has red circular safety markings, and the walls are a clean, sterile white. The atmosphere is optimistic and focused on recovery, utilizing advanced mobility training technology." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfvF_qw65yGiF6QGJLN0-9I64YS88cd6_n_eFlpu2z2uHhCplmLfKuQO2e45ktu3W7-FYrXc266rwk6XTZkUFBYjm2cYSo3iBrxSwEgwat7LZNzlxbiPIDdeAg_yW8-7Pob-8Uq_7YSj9KWTKv6z2l7Ull_sAgmi4VObZpIBN4IlK9tC4imnV_Mon3o7kOemCI3zzLdPGTPM9R3Pzu-TjIEPbpweUPoKjyEHyD9ZKNH7nZ1T6uK1_m");'></div>
+<div class="p-stack-lg flex flex-col items-center text-center">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Fizik Tedavi</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Rehabilitasyon ve ağrı yönetimi için uzman kadro.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+</div>
+<!-- Radyoloji -->
+<div class="unit-card overflow-hidden bg-hospital-white border border-[#EEEEEE] rounded-xl flex flex-col transition-all duration-300" data-category="tani">
+<div class="h-40 bg-cover bg-center" data-alt="A high-tech medical radiology suite featuring a modern CT scanner in a clean, quiet examination room. The walls are finished in a soft lavender-gray tone, providing a calming atmosphere for patients. The imaging equipment is pristine white and appears technologically advanced. The lighting is soft and indirect, emphasizing the hospital's focus on diagnostic precision and patient comfort." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkG69MsDY-gdUHOGvWUFqUOd3tFQiWu2SM5xCIwQa8UJgKOqbILCehmhDDikNaHq-jmh4plb6ytMEOJq3RP5LBY9FsHIFAmL97vhaK-NVO-k0Idyl8y41MLSoRZR3HnOkeE0NzLNlYI0ZE2jNY5MwgWvnkpdAUdBD2EJLsRVCl-fcLZb-HK1wJb6enZjgAW3xiEzE6UKrNac9TK-B2mPTz2_K_nbY0lxmsIsMrp0jYv5-NlVD9SJsF");'></div>
+<div class="p-stack-lg flex flex-col items-center text-center">
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Radyoloji</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">MR, BT ve ultrason gibi ileri görüntüleme teknikleri.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+</div>
+<!-- Ortopedi -->
+<div class="unit-card bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-xl flex flex-col items-center text-center transition-all duration-300" data-category="cerrahi">
+<div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-stack-md text-deep-madder">
+<span class="material-symbols-outlined text-4xl">orthopedics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Ortopedi</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Kas, eklem ve iskelet sistemi cerrahi tedavileri.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+<!-- Üroloji -->
+<div class="unit-card bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-xl flex flex-col items-center text-center transition-all duration-300" data-category="cerrahi">
+<div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-stack-md text-deep-madder">
+<span class="material-symbols-outlined text-4xl">urology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Üroloji</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Böbrek ve idrar yolu hastalıkları cerrahi ve tıbbi tedavi.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+<!-- Nöroloji -->
+<div class="unit-card bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-xl flex flex-col items-center text-center transition-all duration-300" data-category="dahili">
+<div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-stack-md text-deep-madder">
+<span class="material-symbols-outlined text-4xl">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Nöroloji</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Sinir sistemi hastalıkları ve EEG-EMG laboratuvar hizmetleri.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+<!-- Yenidoğan -->
+<div class="unit-card bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-xl flex flex-col items-center text-center transition-all duration-300" data-category="dahili">
+<div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-stack-md text-deep-madder">
+<span class="material-symbols-outlined text-4xl">baby_changing_station</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-text mb-stack-sm">Yenidoğan Yoğun Bakım</h3>
+<p class="font-body-sm text-body-sm text-slate-gray mb-stack-lg flex-grow">Bebek dostu hastane standartlarında kritik bakım ünitesi.</p>
+<button class="w-full py-2 border border-charcoal-text text-charcoal-text rounded font-nav-link text-nav-link hover:bg-charcoal-text hover:text-hospital-white transition-colors">İncele</button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-deep-madder py-20 text-hospital-white">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-stack-lg">
+<div>
+<h2 class="font-headline-md text-headline-md mb-stack-sm">Hangi birime ihtiyacınız olduğundan emin değil misiniz?</h2>
+<p class="font-body-lg text-body-lg opacity-90">Bize ulaşın, uzmanlarımız sizi en doğru birime yönlendirsin.</p>
+</div>
+<div class="flex gap-stack-md">
+<a class="bg-hospital-white text-deep-madder px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-all" href="tel:03288135010">
+<span class="material-symbols-outlined">call</span>
+                        0328 813 50 10
+                    </a>
+<a href="onlineislemler.html" class="border-2 border-hospital-white text-hospital-white px-8 py-4 rounded-xl font-bold hover:bg-hospital-white hover:text-deep-madder transition-all flex items-center justify-center">
+                        Hızlı Randevu Al
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface border-t border-[#EEEEEE] w-full">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="col-span-1 md:col-span-1">
+<a class="font-headline-sm text-headline-sm font-bold text-deep-madder mb-stack-lg block" href="../index.html">
+                    İbni Sina Hastanesi
+                </a>
+<p class="font-body-sm text-body-sm text-slate-gray">
+                    Mareşal Fevzi Çakmak, 7520. Sk. No:1, 80020 Osmaniye Merkez/Osmaniye
+                </p>
+<div class="mt-stack-lg flex space-x-4">
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined">facebook</span></a>
+<a class="text-slate-gray hover:text-action-teal transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-charcoal-text mb-stack-md">Kurumsal</h4>
+<ul class="space-y-stack-sm font-body-sm text-body-sm text-slate-gray">
+<li class=""><a class="hover:text-action-teal transition-colors" href="kurumsal.html">Hakkımızda</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="#">KVK Aydınlatma Metni</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="isbasvurusu.html">İş Başvurusu</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-charcoal-text mb-stack-md">Hızlı Erişim</h4>
+<ul class="space-y-stack-sm font-body-sm text-body-sm text-slate-gray">
+<li class=""><a class="hover:text-action-teal transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="onlineislemler.html">Laboratuar Sonuçları</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="onlineislemler.html">Radyolojik Görüntüleme</a></li>
+<li class=""><a class="hover:text-action-teal transition-colors" href="#">Sıkça Sorulan Sorular</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-charcoal-text mb-stack-md">İletişim</h4>
+<ul class="space-y-stack-sm font-body-sm text-body-sm text-slate-gray">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-action-teal text-sm">phone</span>
+                        (0328) 813 50 10
+                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-action-teal text-sm">mail</span>
+                        info@ibnisinahastanesi.com.tr
+                    </li>
+<li class=""><a class="text-deep-madder font-bold hover:underline" href="iletisim.html">İletişim Formu</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-stack-md border-t border-[#EEEEEE] text-center font-body-sm text-body-sm text-slate-gray">
+            © 2024 İbni Sina Hastanesi. Tüm Hakları Saklıdır.
+        </div>
+</footer>
+<script>
+        function filterUnits(category) {
+            const cards = document.querySelectorAll('.unit-card');
+            const btns = document.querySelectorAll('.unit-filter-btn');
+            
+            btns.forEach(btn => btn.classList.remove('active-filter'));
+            event.target.classList.add('active-filter');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                    setTimeout(() => card.style.opacity = '1', 50);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+
+        const searchInput = document.getElementById('unit-search');
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.unit-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                const desc = card.querySelector('p').innerText.toLowerCase();
+                if (title.includes(query) || desc.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body></html>

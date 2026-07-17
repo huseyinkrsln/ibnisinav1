@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kariyer | İbni Sina Hastanesi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dce0e4",
+                        "on-tertiary-fixed-variant": "#004e5e",
+                        "deep-madder": "#A81E13",
+                        "primary-container": "#a81e13",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#005f72",
+                        "surface-container-high": "#e6e9e7",
+                        "on-tertiary-container": "#68dbfb",
+                        "charcoal-text": "#22272A",
+                        "on-tertiary-fixed": "#001f27",
+                        "on-surface-variant": "#5a413c",
+                        "hospital-white": "#FFFFFF",
+                        "slate-gray": "#4E5255",
+                        "surface-container-low": "#f1f4f2",
+                        "action-teal": "#009DBB",
+                        "surface-variant": "#e0e3e1",
+                        "inverse-on-surface": "#eef1ef",
+                        "inverse-surface": "#2d3130",
+                        "secondary-fixed": "#dfe3e7",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#5e6367",
+                        "surface-tint": "#b4271b",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e0e3e1",
+                        "tertiary-fixed": "#b1ecff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#ffdad4",
+                        "on-surface": "#181c1b",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#840000",
+                        "surface-container": "#ebefed",
+                        "on-secondary-fixed-variant": "#42474b",
+                        "surface": "#f7faf8",
+                        "tertiary-fixed-dim": "#61d5f5",
+                        "surface-bright": "#f7faf8",
+                        "outline": "#8e706b",
+                        "on-primary-fixed": "#410000",
+                        "secondary": "#5a5f62",
+                        "on-primary-container": "#ffbbb1",
+                        "outline-variant": "#e2beb9",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb4a8",
+                        "background": "#f7faf8",
+                        "on-background": "#181c1b",
+                        "surface-dim": "#d7dbd9",
+                        "on-primary-fixed-variant": "#910904",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "on-secondary-fixed": "#171c1f",
+                        "tertiary": "#004654",
+                        "surface-muted": "#F8FAFB",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "stack-lg": "24px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "nav-link": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "nav-link": ["15px", {"lineHeight": "24px", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            outline: none;
+            border-color: #009DBB;
+            box-shadow: 0 0 0 2px rgba(0, 157, 187, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-charcoal-text font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-hospital-white border-b border-[#EEEEEE] transition-all duration-300 h-24">
+    <div class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center gap-4">
+        <!-- Brand -->
+        <a class="mr-4 flex items-center" href="../index.html">
+            <img src="../ibn-i-sina-hastanesi.jpg" alt="İbni Sina Hastanesi Logo" class="h-16 w-auto object-contain">
+        </a>
+        <!-- Tabbed Navigation Links -->
+        <div class="hidden lg:flex items-center h-full">
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="../index.html">Anasayfa</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="tıbbibirimler.html">Tıbbi Birimler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="hekimlerimiz.html">Hekimlerimiz</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="onlineislemler.html">Online İşlemler</a>
+            <a class="font-nav-link text-[13px] tracking-tight text-slate-gray nav-link-item px-3 h-full flex items-center hover:text-deep-madder transition-colors" href="iletisim.html">İletişim</a>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center gap-stack-md">
+            <div class="flex items-center gap-2 border-r border-slate-gray/20 pr-4">
+                <span class="text-[11px] font-bold text-deep-madder cursor-pointer">TR</span>
+                <span class="text-[11px] text-slate-gray">|</span>
+                <span class="text-[11px] font-bold text-slate-gray hover:text-deep-madder cursor-pointer transition-colors">EN</span>
+            </div>
+            <a class="flex items-center gap-1.5 text-deep-madder font-bold text-[13px] ml-2" href="tel:08500000000">
+                <span class="material-symbols-outlined text-base">call</span>
+                <span class="">0850 000 00 00</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional medical team" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrj3sJ7RjibUoH1xkQ3TCy5q2GHGcjX-1dbFjURee9MgPuW93x92yQczEGdMuAC3D8llqUWF8NQUZB5dc1QJoFfQPG4iU-VDqsWVe5RaTJgY4VjKpCbsYzA48XKJl3amx8bjBhGX8lz5JLqwgqaamxl567lN182Yqz_SMsBOIF3cj8v54eOqLJ3ueu12ocjzYZ38TyM0-RsgmncBkiU28ArUWiWYVevih7BHTu_p1SQl9Bz6xdW7zm')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-hospital-white via-hospital-white/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<h1 class="font-headline-lg text-headline-lg text-charcoal-text mb-stack-md">
+                        Kariyeriniz Bizimle <span class="text-deep-madder">Şekillensin</span>
+</h1>
+<p class="font-body-lg text-body-lg text-slate-gray mb-stack-lg">
+                        İbni Sina Hastanesi olarak, modern tıp teknolojilerini insani değerlerle birleştiriyor, ekibimize katılacak her bir profesyonelin gelişimine değer veriyoruz.
+                    </p>
+<div class="flex space-x-4">
+<a class="bg-deep-madder text-hospital-white px-8 py-4 rounded-xl font-headline-sm text-lg hover:shadow-lg transition-all transform hover:-translate-y-1" href="#open-positions">
+                            Hemen Başvur
+                        </a>
+<a class="border-2 border-charcoal-text text-charcoal-text px-8 py-4 rounded-xl font-headline-sm text-lg hover:bg-charcoal-text hover:text-white transition-all transform hover:-translate-y-1" href="#why-us">
+                            Neden Biz?
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="py-section-gap bg-surface-muted">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-section-gap items-center">
+<div class="space-y-stack-md">
+<h2 class="font-headline-md text-headline-md text-deep-madder">İşe Alım Politikamız</h2>
+<p class="font-body-md text-body-md text-slate-gray leading-relaxed">
+                        Şirketimiz, Anayasa’nın 20. maddesine, KVK Kanunu’nun ilgili maddelerine uygun olarak, kişisel verilerin işlenmesi konusunda; hukuka ve dürüstlük kurallarına uygun, şeffaf bir süreç yürütmektedir. İnsan kaynakları politikalarımızın temelini; yetkinlik bazlı değerlendirme, sürekli gelişim ve çalışan memnuniyeti oluşturmaktadır.
+                    </p>
+<div class="p-stack-md bg-hospital-white border border-[#EEEEEE] rounded-xl flex items-start gap-4">
+<span class="material-symbols-outlined text-action-teal text-4xl" data-icon="verified_user">verified_user</span>
+<div>
+<h4 class="font-headline-sm text-sm font-bold uppercase tracking-wider text-charcoal-text">KVKK Uyumlu Süreç</h4>
+<p class="text-xs text-slate-gray mt-1">Tüm başvurularınız 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında güvence altındadır.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="aspect-square rounded-full overflow-hidden border-4 border-hospital-white shadow-xl">
+<img alt="Laboratory Technician" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj8cNo2jD_tzaJDgfUEQbNjaFJseTtbQDF4s4YQtkEFFewIuTc_v8esoFmW3UhGrRUQ7o75YtdQBRinlDpvISRHCkl8BF6Ne_yS_BkgtvuDUA43DBg4zIkp8GtkdD1vst-aS2wS4rILPH2mWBS3gkvEWtlKlMAv2TPTB5GY3Y0nA7m-08PQwjXKOF6JdgIbYMKzR6JOb9ZnNpYmocaYdvqhDwznuZVYQo_mqXhwVt-MNUD2c-YGel_"/>
+</div>
+<div class="aspect-square rounded-full overflow-hidden border-4 border-hospital-white shadow-xl mt-12">
+<img alt="Nurse and Patient" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA93_8dslodkBwV4K5COUli6Ooth9Zo1i2eJ4UFMLqOONloxyrvAq6yREaDCuia9RMRkNU_X9qLkYXjjBdcgKsMWlGhh8Z-Z3GWwUpmGSNYu9t46kLhu901bq9w3Aiq8oWXeU8R1jJrErJ0QnJsiQvOZUDCagzsdKebFX4NvEb0yuOByZzJURUMBfdDzro4LZHTLX3wNU8yK1P92NtGnNq2BHsm2FHIP7u94djOdAFNzlDqDCERpiI1"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Work With Us -->
+<section class="py-section-gap" id="why-us">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-charcoal-text">Neden İbni Sina Hastanesi?</h2>
+<p class="font-body-md text-slate-gray mt-4">Osmaniye'nin merkezinde, sağlıkta mükemmeliyetin adresi.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter h-auto md:h-[500px]">
+<div class="md:col-span-2 bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-3xl relative overflow-hidden group hover:shadow-2xl transition-all duration-500">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<span class="material-symbols-outlined text-5xl text-deep-madder" data-icon="biotech">biotech</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-2">Modern Teknoloji</h3>
+<p class="text-slate-gray">En son tıbbi cihazlar ve dijital sağlık altyapısı ile çalışanlarımıza en verimli çalışma ortamını sunuyoruz.</p>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[200px]" data-icon="biotech">biotech</span>
+</div>
+</div>
+<div class="bg-deep-madder p-stack-lg rounded-3xl text-hospital-white flex flex-col justify-between hover:shadow-2xl transition-all">
+<span class="material-symbols-outlined text-5xl" data-icon="groups">groups</span>
+<div>
+<h3 class="font-headline-sm text-xl mb-2">Profesyonel Ekip</h3>
+<p class="opacity-80">Alanında uzman hekimler ve tecrübeli sağlık personeli ile güçlü bir aile olmanın gururunu yaşıyoruz.</p>
+</div>
+</div>
+<div class="bg-action-teal p-stack-lg rounded-3xl text-hospital-white flex flex-col justify-between hover:shadow-2xl transition-all">
+<span class="material-symbols-outlined text-5xl" data-icon="location_on">location_on</span>
+<div>
+<h3 class="font-headline-sm text-xl mb-2">Merkezi Lokasyon</h3>
+<p class="opacity-80">Osmaniye'nin kalbinde kolay ulaşım imkanları ile konforlu bir çalışma hayatı sizi bekliyor.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-muted border border-[#EEEEEE] p-stack-lg rounded-3xl flex items-center gap-stack-lg hover:shadow-xl transition-all">
+<div class="flex-shrink-0 w-24 h-24 bg-hospital-white rounded-2xl flex items-center justify-center border border-[#EEEEEE]">
+<span class="material-symbols-outlined text-4xl text-deep-madder" data-icon="school">school</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-lg mb-1">Sürekli Eğitim</h3>
+<p class="text-slate-gray">Seminerler, kurslar ve sertifika programları ile kariyer yolculuğunuzda sizi destekliyoruz.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Open Positions Section -->
+<section class="py-section-gap bg-surface-muted" id="open-positions">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-12">
+<h2 class="font-headline-md text-headline-md text-charcoal-text uppercase tracking-tight">Açık Pozisyonlar</h2>
+<p class="font-body-md text-slate-gray mt-2">Hastanemiz bünyesinde yer alan güncel iş fırsatlarını inceleyebilirsiniz.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Position 1 -->
+<div class="bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-2xl flex flex-col justify-between hover:border-deep-madder transition-all shadow-sm">
+<div>
+<span class="bg-deep-madder/10 text-deep-madder px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Medikal</span>
+<h3 class="font-headline-sm text-lg mb-2">Uzman Hemşire</h3>
+<p class="text-sm text-slate-gray mb-6">Yataklı servislerde görevlendirilmek üzere, en az 2 yıl deneyimli çalışma arkadaşları arıyoruz.</p>
+</div>
+<a class="w-full text-center py-3 border-2 border-deep-madder text-deep-madder rounded-lg font-bold hover:bg-deep-madder hover:text-white transition-all" href="#application-form" onclick="setPostion('Hemşire')">Başvur</a>
+</div>
+<!-- Position 2 -->
+<div class="bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-2xl flex flex-col justify-between hover:border-deep-madder transition-all shadow-sm">
+<div>
+<span class="bg-action-teal/10 text-action-teal px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">İdari</span>
+<h3 class="font-headline-sm text-lg mb-2">Tıbbi Sekreter</h3>
+<p class="text-sm text-slate-gray mb-6">Hasta karşılama ve kayıt süreçlerinde tecrübeli, iletişim becerileri yüksek ekip arkadaşları.</p>
+</div>
+<a class="w-full text-center py-3 border-2 border-deep-madder text-deep-madder rounded-lg font-bold hover:bg-deep-madder hover:text-white transition-all" href="#application-form" onclick="setPostion('Tıbbi Sekreter')">Başvur</a>
+</div>
+<!-- Position 3 -->
+<div class="bg-hospital-white border border-[#EEEEEE] p-stack-lg rounded-2xl flex flex-col justify-between hover:border-deep-madder transition-all shadow-sm">
+<div>
+<span class="bg-slate-gray/10 text-slate-gray px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Destek</span>
+<h3 class="font-headline-sm text-lg mb-2">Temizlik Personeli</h3>
+<p class="text-sm text-slate-gray mb-6">Hastane hijyen standartlarına hakim, titiz ve dinamik çalışma disiplinine sahip adaylar.</p>
+</div>
+<a class="w-full text-center py-3 border-2 border-deep-madder text-deep-madder rounded-lg font-bold hover:bg-deep-madder hover:text-white transition-all" href="#application-form" onclick="setPostion('Temizlik Personeli')">Başvur</a>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-slate-gray italic font-body-sm">Aradığınız pozisyonu bulamadınız mı? Genel başvuru formunu doldurarak özgeçmişinizi bırakabilirsiniz.</p>
+</div>
+</div>
+</section>
+<!-- Application Form Section -->
+<section class="py-section-gap bg-hospital-white relative" id="application-form">
+<div class="max-w-4xl mx-auto px-margin-mobile">
+<div class="text-center mb-10">
+<h2 class="font-headline-md text-headline-md text-charcoal-text">Başvuru Formu</h2>
+<p class="text-slate-gray">Lütfen aşağıdaki alanları eksiksiz bir şekilde doldurunuz.</p>
+</div>
+<div class="bg-hospital-white rounded-3xl border border-[#EEEEEE] shadow-2xl overflow-hidden">
+<div class="bg-charcoal-text p-stack-lg text-hospital-white flex justify-between items-center">
+<h2 class="font-headline-sm text-xl">İş Başvuru Formu</h2>
+<span class="font-label-caps bg-deep-madder px-3 py-1 rounded">Hızlı Başvuru</span>
+</div>
+<div class="flex gap-2 px-8 pt-4 bg-hospital-white border-b border-[#EEEEEE]">
+    <button class="px-6 py-4 font-headline-sm text-sm font-bold text-deep-madder border-b-2 border-deep-madder focus:outline-none transition-colors tab-btn active" onclick="openTab(event, 'tab-detayli')">Detaylı Başvuru Formu</button>
+    <button class="px-6 py-4 font-headline-sm text-sm font-bold text-slate-gray border-b-2 border-transparent hover:text-deep-madder focus:outline-none transition-colors tab-btn" onclick="openTab(event, 'tab-hizli')">Hızlı CV Gönder</button>
+</div>
+<div id="tab-detayli" class="tab-content block">
+<form id="careerForm" class="p-8 space-y-12">
+<!-- Step 1: Personal Info -->
+<div>
+<div class="flex items-center gap-3 mb-6 border-b border-[#EEEEEE] pb-2">
+<span class="w-8 h-8 rounded-full bg-deep-madder text-white flex items-center justify-center font-bold">1</span>
+<h3 class="font-headline-sm text-lg uppercase tracking-wide">Kişisel Bilgiler</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">T.C. Kimlik No</label>
+<input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all" placeholder="00000000000" required="" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">Adı ve Soyadı</label>
+<input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all" placeholder="Ad Soyad" required="" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">Doğum Tarihi</label>
+<input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all" required="" type="date"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">GSM No</label>
+<input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all" placeholder="05XX XXX XX XX" required="" type="tel"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">E-Posta</label>
+<input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all" placeholder="ornek@mail.com" required="" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">Medeni Hali</label>
+<select class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all">
+<option>Seçiniz</option>
+<option>Evli</option>
+<option>Bekar</option>
+<option>Boşanmış</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-1">
+<label class="font-label-caps text-slate-gray">Profil Fotoğrafı</label>
+<input class="w-full border-[#EEEEEE] rounded-lg p-2 form-input-focus transition-all" type="file" accept="image/*"/>
+</div>
+</div>
+</div>
+<!-- Step 2: Educational Status -->
+<div>
+<div class="flex items-center gap-3 mb-6 border-b border-[#EEEEEE] pb-2">
+<span class="w-8 h-8 rounded-full bg-deep-madder text-white flex items-center justify-center font-bold">2</span>
+<h3 class="font-headline-sm text-lg uppercase tracking-wide">Eğitim ve Uzmanlık</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">Eğitim Düzeyi</label>
+<select class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all">
+<option>Seçiniz</option>
+<option>Lise</option>
+<option>Meslek Yüksek Okulu</option>
+<option>Üniversite</option>
+<option>Yüksek Lisans</option>
+<option>Doktora</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">Bölüm / Branş</label>
+<input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all" placeholder="Mezuniyet Bölümü" type="text"/>
+</div>
+<div class="md:col-span-2 space-y-1">
+<label class="font-label-caps text-slate-gray">Başvurulan Pozisyon</label>
+<select class="w-full border-[#EEEEEE] rounded-lg p-3 font-bold text-deep-madder form-input-focus transition-all" id="target-position">
+<option value="">Branş Seçiniz</option>
+<option value="Doktor">Doktor</option>
+<option value="Hemşire">Hemşire</option>
+<option value="Ebe">Ebe</option>
+<option value="Tıbbi Sekreter">Tıbbi Sekreter</option>
+<option value="Teknik Servis">Teknik Servis</option>
+<option value="ATT / Sağlık Memuru">ATT / Sağlık Memuru</option>
+<option value="Temizlik Personeli">Temizlik Personeli</option>
+<option value="Güvenlik">Güvenlik</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Step 3: Experience & Health -->
+<div>
+<div class="flex items-center gap-3 mb-6 border-b border-[#EEEEEE] pb-2">
+<span class="w-8 h-8 rounded-full bg-deep-madder text-white flex items-center justify-center font-bold">3</span>
+<h3 class="font-headline-sm text-lg uppercase tracking-wide">Sağlık ve Deneyim</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">Kan Grubu</label>
+<select class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all">
+<option>Seçiniz</option>
+<option>A Rh +</option>
+<option>A Rh -</option>
+<option>B Rh +</option>
+<option>B Rh -</option>
+<option>AB Rh +</option>
+<option>AB Rh -</option>
+<option>0 Rh +</option>
+<option>0 Rh -</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">Sigara Kullanımı</label>
+<div class="flex gap-4 p-3 border border-[#EEEEEE] rounded-lg">
+<label class="flex items-center gap-2 text-sm"><input class="text-deep-madder" name="smoke" type="radio"/> Evet</label>
+<label class="flex items-center gap-2 text-sm"><input class="text-deep-madder" name="smoke" type="radio"/> Hayır</label>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">Gece Mesaisi</label>
+<div class="flex gap-4 p-3 border border-[#EEEEEE] rounded-lg">
+<label class="flex items-center gap-2 text-sm"><input class="text-deep-madder" name="night" type="radio"/> Uygun</label>
+<label class="flex items-center gap-2 text-sm"><input class="text-deep-madder" name="night" type="radio"/> Değil</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4: Deneyim ve Kurslar -->
+<div>
+<div class="flex items-center gap-3 mb-6 border-b border-[#EEEEEE] pb-2">
+<span class="w-8 h-8 rounded-full bg-deep-madder text-white flex items-center justify-center font-bold">4</span>
+<h3 class="font-headline-sm text-lg uppercase tracking-wide">Deneyim ve Kurslar</h3>
+</div>
+
+<h4 class="font-headline-sm text-md text-charcoal-text mb-4">İş Deneyimleri</h4>
+<div id="experience-container">
+    <div class="dynamic-row bg-surface-muted p-6 rounded-xl border border-[#EEEEEE] mb-4 relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-1">
+                <label class="font-label-caps text-slate-gray">İş Yerinin Adı</label>
+                <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="exp_company[]" type="text"/>
+            </div>
+            <div class="space-y-1">
+                <label class="font-label-caps text-slate-gray">İş Yerindeki Göreviniz</label>
+                <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="exp_role[]" type="text"/>
+            </div>
+            <div class="space-y-1">
+                <label class="font-label-caps text-slate-gray">Çalışma Süreniz</label>
+                <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="exp_duration[]" type="text"/>
+            </div>
+            <div class="space-y-1">
+                <label class="font-label-caps text-slate-gray">İş Yeri Hangi Şehirde</label>
+                <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="exp_city[]" type="text"/>
+            </div>
+            <div class="md:col-span-2 space-y-1">
+                <label class="font-label-caps text-slate-gray">Ayrılma Sebebiniz</label>
+                <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="exp_reason[]" type="text"/>
+            </div>
+        </div>
+    </div>
+</div>
+<button type="button" onclick="addExperience()" class="mb-8 flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-lg font-bold text-sm hover:bg-blue-100 transition-colors">
+    <span class="material-symbols-outlined text-sm">add_circle</span> İş Deneyimi Ekle
+</button>
+
+<h4 class="font-headline-sm text-md text-charcoal-text mb-4">Kurs ve Sertifikalar</h4>
+<div id="course-container">
+    <div class="dynamic-row bg-surface-muted p-6 rounded-xl border border-[#EEEEEE] mb-4 relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-1">
+                <label class="font-label-caps text-slate-gray">Kurs Adı / Konusu</label>
+                <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="course_name[]" type="text"/>
+            </div>
+            <div class="space-y-1">
+                <label class="font-label-caps text-slate-gray">Eğitim Kurumu</label>
+                <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="course_institution[]" type="text"/>
+            </div>
+            <div class="md:col-span-2 space-y-1">
+                <label class="font-label-caps text-slate-gray">Kurs Süresi / Tarihi</label>
+                <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="course_duration[]" type="text"/>
+            </div>
+        </div>
+    </div>
+</div>
+<button type="button" onclick="addCourse()" class="flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-lg font-bold text-sm hover:bg-blue-100 transition-colors">
+    <span class="material-symbols-outlined text-sm">add_circle</span> Kurs Ekle
+</button>
+</div>
+
+<!-- Step 5: KVKK -->
+<div class="bg-surface-muted p-6 rounded-2xl space-y-4">
+<div class="flex items-start gap-3">
+<input class="mt-1 rounded text-deep-madder" required="" type="checkbox"/>
+<label class="text-xs text-slate-gray">
+                                    İş İlişkisi Kapsamında Kişisel Verilere İlişkin <strong>Beyan Ve Rıza Onay Formu'nu</strong> okudum, anladım ve onaylıyorum. Verilerimin 6698 sayılı KVKK kapsamında işlenmesine izin veriyorum.
+                                </label>
+</div>
+<button class="w-full bg-deep-madder text-hospital-white py-4 rounded-xl font-headline-sm text-lg hover:bg-primary transition-all shadow-lg active:scale-[0.98]" type="submit">
+                                Başvuruyu Tamamla
+                            </button>
+</div>
+</form>
+</div>
+
+<div id="tab-hizli" class="tab-content hidden">
+<form id="quickCvForm" class="p-8 space-y-8">
+<div>
+<div class="flex items-center gap-3 mb-6 border-b border-[#EEEEEE] pb-2">
+<span class="w-8 h-8 rounded-full bg-deep-madder text-white flex items-center justify-center font-bold">1</span>
+<h3 class="font-headline-sm text-lg uppercase tracking-wide">Hızlı Özgeçmiş Gönderimi</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">Adı ve Soyadı</label>
+<input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all" placeholder="Ad Soyad" required="" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-slate-gray">Telefon No</label>
+<input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus transition-all" placeholder="05XX XXX XX XX" required="" type="tel"/>
+</div>
+<div class="md:col-span-2 space-y-1">
+<label class="font-label-caps text-slate-gray">CV Yükle (PDF, DOCX)</label>
+<input class="w-full border-[#EEEEEE] rounded-lg p-2.5 form-input-focus transition-all" type="file" accept=".pdf,.doc,.docx" required/>
+</div>
+</div>
+</div>
+<div class="bg-surface-muted p-6 rounded-2xl space-y-4">
+<div class="flex items-start gap-3">
+<input class="mt-1 rounded text-deep-madder" required="" type="checkbox"/>
+<label class="text-xs text-slate-gray">
+    İş İlişkisi Kapsamında Kişisel Verilere İlişkin <strong>Beyan Ve Rıza Onay Formu'nu</strong> okudum, anladım ve onaylıyorum. Verilerimin 6698 sayılı KVKK kapsamında işlenmesine izin veriyorum.
+</label>
+</div>
+<button class="w-full bg-deep-madder text-hospital-white py-4 rounded-xl font-headline-sm text-lg hover:bg-primary transition-all shadow-lg active:scale-[0.98]" type="submit">
+    CV'mi Gönder
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Support -->
+<section class="py-section-gap bg-charcoal-text text-hospital-white">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-md text-headline-md mb-8">Sorularınız mı Var?</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg max-w-3xl mx-auto">
+<div class="p-stack-lg border border-slate-gray rounded-2xl flex items-center gap-4 text-left">
+<span class="material-symbols-outlined text-action-teal text-4xl" data-icon="call">call</span>
+<div>
+<p class="font-label-caps text-slate-gray">Randevu &amp; Bilgi Hattı</p>
+<p class="font-headline-sm text-xl">0328 813 50 10</p>
+</div>
+</div>
+<div class="p-stack-lg border border-slate-gray rounded-2xl flex items-center gap-4 text-left">
+<span class="material-symbols-outlined text-action-teal text-4xl" data-icon="mail">mail</span>
+<div>
+<p class="font-label-caps text-slate-gray">İK E-Posta</p>
+<p class="font-headline-sm text-xl">ik@ibnisinahastanesi.com.tr</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full bg-surface border-t border-[#EEEEEE]">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-deep-madder mb-4">
+                    İbni Sina Hastanesi
+                </div>
+<p class="font-body-sm text-body-sm text-slate-gray">
+                    Sağlığınız bizim için değerlidir. Profesyonel kadromuz ve modern altyapımızla Osmaniye'de hizmetinizdeyiz.
+                </p>
+</div>
+<div>
+<h4 class="font-headline-sm text-sm font-bold text-charcoal-text mb-4 uppercase">Kurumsal</h4>
+<ul class="space-y-2 text-body-sm font-body-sm text-slate-gray">
+<li class="hover:text-action-teal transition-colors cursor-pointer"><a href="kurumsal.html">Hakkımızda</a></li>
+<li class="hover:text-action-teal transition-colors cursor-pointer"><a href="kurumsal.html">Yönetim</a></li>
+<li class="hover:text-action-teal transition-colors cursor-pointer"><a href="kurumsal.html">Kalite Politikamız</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-sm text-sm font-bold text-charcoal-text mb-4 uppercase">Yardım &amp; Bilgi</h4>
+<ul class="space-y-2 text-body-sm font-body-sm text-slate-gray">
+<li class="hover:text-action-teal transition-colors cursor-pointer"><a href="iletisim.html">İletişim</a></li>
+<li class="hover:text-action-teal transition-colors cursor-pointer">KVK Aydınlatma Metni</li>
+<li class="hover:text-action-teal transition-colors cursor-pointer">Çerez Politikası</li>
+<li class="hover:text-action-teal transition-colors cursor-pointer">Sıkça Sorulan Sorular</li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-sm text-sm font-bold text-charcoal-text mb-4 uppercase">Sosyal Medya</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-gray hover:text-deep-madder transition-colors cursor-pointer" data-icon="facebook">face_nod</span>
+<span class="material-symbols-outlined text-slate-gray hover:text-deep-madder transition-colors cursor-pointer" data-icon="photo_camera">photo_camera</span>
+<span class="material-symbols-outlined text-slate-gray hover:text-deep-madder transition-colors cursor-pointer" data-icon="share">share</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-6 border-t border-[#EEEEEE] text-center font-body-sm text-body-sm text-slate-gray">
+            © 2024 İbni Sina Hastanesi. Tüm Hakları Saklıdır.
+        </div>
+</footer>
+<script>
+        // Tab functionality
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("block");
+                tabcontent[i].classList.add("hidden");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("text-deep-madder", "border-deep-madder");
+                tablinks[i].classList.add("text-slate-gray", "border-transparent");
+            }
+            document.getElementById(tabName).classList.remove("hidden");
+            document.getElementById(tabName).classList.add("block");
+            evt.currentTarget.classList.remove("text-slate-gray", "border-transparent");
+            evt.currentTarget.classList.add("text-deep-madder", "border-deep-madder");
+        }
+
+        // Set position in dropdown when clicking specific 'Apply' buttons
+        function setPostion(posName) {
+            const select = document.getElementById('target-position');
+            if (select) {
+                select.value = posName;
+                openTab({currentTarget: document.querySelector('.tab-btn')}, 'tab-detayli');
+            }
+        }
+
+        function addExperience() {
+            const container = document.getElementById('experience-container');
+            const row = document.createElement('div');
+            row.className = 'dynamic-row bg-surface-muted p-6 rounded-xl border border-[#EEEEEE] mb-4 relative';
+            row.innerHTML = `
+                <button type="button" class="absolute top-4 right-4 text-red-500 hover:text-red-700" onclick="this.parentElement.remove()">
+                    <span class="material-symbols-outlined text-xl">delete</span>
+                </button>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                    <div class="space-y-1">
+                        <label class="font-label-caps text-slate-gray">İş Yerinin Adı</label>
+                        <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="exp_company[]" type="text"/>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="font-label-caps text-slate-gray">İş Yerindeki Göreviniz</label>
+                        <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="exp_role[]" type="text"/>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="font-label-caps text-slate-gray">Çalışma Süreniz</label>
+                        <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="exp_duration[]" type="text"/>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="font-label-caps text-slate-gray">İş Yeri Hangi Şehirde</label>
+                        <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="exp_city[]" type="text"/>
+                    </div>
+                    <div class="md:col-span-2 space-y-1">
+                        <label class="font-label-caps text-slate-gray">Ayrılma Sebebiniz</label>
+                        <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="exp_reason[]" type="text"/>
+                    </div>
+                </div>
+            `;
+            container.appendChild(row);
+        }
+
+        function addCourse() {
+            const container = document.getElementById('course-container');
+            const row = document.createElement('div');
+            row.className = 'dynamic-row bg-surface-muted p-6 rounded-xl border border-[#EEEEEE] mb-4 relative';
+            row.innerHTML = `
+                <button type="button" class="absolute top-4 right-4 text-red-500 hover:text-red-700" onclick="this.parentElement.remove()">
+                    <span class="material-symbols-outlined text-xl">delete</span>
+                </button>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+                    <div class="space-y-1">
+                        <label class="font-label-caps text-slate-gray">Kurs Adı / Konusu</label>
+                        <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="course_name[]" type="text"/>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="font-label-caps text-slate-gray">Eğitim Kurumu</label>
+                        <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="course_institution[]" type="text"/>
+                    </div>
+                    <div class="md:col-span-2 space-y-1">
+                        <label class="font-label-caps text-slate-gray">Kurs Süresi / Tarihi</label>
+                        <input class="w-full border-[#EEEEEE] rounded-lg p-3 form-input-focus" name="course_duration[]" type="text"/>
+                    </div>
+                </div>
+            `;
+            container.appendChild(row);
+        }
+
+        // Form Submission Simulation
+        document.getElementById('careerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = "Lütfen bekleyin işleminiz yapılıyor...";
+            btn.disabled = true;
+            btn.style.opacity = "0.7";
+            
+            setTimeout(() => {
+                alert('Başvurunuz başarıyla alınmıştır. İnsan kaynakları departmanımız sizinle iletişime geçecektir.');
+                btn.innerText = originalText;
+                btn.disabled = false;
+                btn.style.opacity = "1";
+                e.target.reset();
+            }, 2000);
+        });
+
+        const quickCvForm = document.getElementById('quickCvForm');
+        if (quickCvForm) {
+            quickCvForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = e.target.querySelector('button[type="submit"]');
+                const originalText = btn.innerText;
+                btn.innerText = "Lütfen bekleyin işleminiz yapılıyor...";
+                btn.disabled = true;
+                btn.style.opacity = "0.7";
+                
+                setTimeout(() => {
+                    alert('Özgeçmişiniz başarıyla alınmıştır. Teşekkür ederiz.');
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                    btn.style.opacity = "1";
+                    e.target.reset();
+                }, 2000);
+            });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md', 'h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('shadow-md', 'h-16');
+                header.classList.add('h-20');
+            }
+        });
+    </script>
+</body></html>
